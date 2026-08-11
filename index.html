@@ -10,7 +10,7 @@
             --bg: #ffffff;
             --bg-alt: #f8fafc;
             --text: #0f172a;
-            --muted: #94a3b8; /* Un gris más suave para que pase desapercibido */
+            --muted: #94a3b8;
             --orange: #d9531e;
             --border: #e2e8f0;
         }
@@ -33,7 +33,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER & MENÚ */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -47,19 +46,18 @@
             z-index: 1000;
         }
 
-        /* LOGO MINIMALISTA */
         .brand-logo {
             font-size: 13px;
-            font-weight: 400; /* Letra más delgada */
-            letter-spacing: 3px; /* Espaciado elegante */
-            color: var(--muted); /* Color gris sutil */
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: var(--muted);
             text-transform: uppercase;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .brand-logo:hover {
-            color: var(--text); /* Se oscurece levemente si pasan el mouse */
+            color: var(--text);
         }
 
         .nav-menu {
@@ -103,7 +101,6 @@
             transform: translateY(-1px);
         }
 
-        /* HERO */
         .hero {
             padding: 100px 6% 80px;
             max-width: 1100px;
@@ -156,7 +153,6 @@
             transform: translateY(-2px);
         }
 
-        /* SECCIONES Y CONTENEDORES */
         .section {
             padding: 90px 6%;
             max-width: 1300px;
@@ -196,7 +192,6 @@
             max-width: 700px;
         }
 
-        /* CARDS / GRIDS */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -289,7 +284,6 @@
             background-color: var(--bg-alt);
         }
 
-        /* CAJAS DE CONSTRUCCIÓN */
         .construction-box {
             background: #ffffff;
             border: 1px solid var(--border);
@@ -358,7 +352,6 @@
             margin: 0 auto 35px;
         }
 
-        /* FOOTER */
         footer {
             padding: 50px 6%;
             text-align: center;
@@ -420,9 +413,7 @@
 </head>
 <body>
 
-    <!-- MENÚ -->
     <header>
-        <!-- AQUI ESTÁ EL NUEVO LOGO MINIMALISTA -->
         <a href="#" class="brand-logo">Bulot SpA</a>
         
         <ul class="nav-menu">
@@ -437,7 +428,6 @@
         <a href="https://wa.me/56945212168?text=Hola,%20quiero%20cotizar" class="header-btn" target="_blank">WhatsApp</a>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
         <span class="hero-tag">Fábrica & Proyectos</span>
         <h1>Diseñamos y Construimos tu Quincho Soñado</h1>
@@ -448,7 +438,6 @@
         </a>
     </section>
 
-    <!-- SECCIÓN 1: QUINCHOS PREFABRICADOS -->
     <section class="section" id="prefabricados">
         <div class="section-header">
             <span class="section-tag">Línea Modular VIP</span>
@@ -489,7 +478,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 2: LLAVE EN MANO -->
     <section class="section section-alt" id="llave-en-mano">
         <div class="section-header">
             <span class="section-tag">Proyectos 100% Personalizados</span>
@@ -523,7 +511,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 3: PARRILLAS (MODELOS) -->
     <section class="section" id="parrillas">
         <div class="section-header">
             <span class="section-tag">Línea de Fuego</span>
@@ -533,7 +520,6 @@
 
         <div class="grid-3">
 
-            <!-- 1. VULCAN PRO -->
             <div class="card">
                 <div class="card-img">
                     <img src="parrilla-vulcan-pro.jpg" alt="Parrilla Vulcan Pro" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Vulcan Pro ]'">
@@ -554,7 +540,6 @@
                 </div>
             </div>
 
-            <!-- 2. VULCAN DUO -->
             <div class="card">
                 <div class="card-img">
                     <img src="parrilla-vulcan-duo.jpg" alt="Parrilla Vulcan Duo" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Vulcan Duo ]'">
@@ -575,7 +560,6 @@
                 </div>
             </div>
 
-            <!-- 3. INOX FRONT PRO -->
             <div class="card">
                 <div class="card-img">
                     <img src="parrilla-inox-front-pro.jpg" alt="Parrilla Inox Front Pro" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Inox Front Pro ]'">
@@ -596,7 +580,6 @@
                 </div>
             </div>
 
-            <!-- 4. VULCAN SPLIT DUAL -->
             <div class="card">
                 <div class="card-img">
                     <img src="parrilla-vulcan-split-dual.jpg" alt="Parrilla Vulcan Split Dual" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Vulcan Split Dual ]'">
@@ -617,7 +600,6 @@
                 </div>
             </div>
 
-            <!-- 5. VULCAN MASTER FIRE -->
             <div class="card">
                 <div class="card-img">
                     <img src="parrilla-vulcan-master-fire.jpg" alt="Parrilla Vulcan Master Fire" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Vulcan Master Fire ]'">
@@ -641,7 +623,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 4: CAMPANAS (MODELOS) -->
     <section class="section section-alt" id="campanas">
         <div class="section-header">
             <span class="section-tag">Extracción & Tiro</span>
@@ -651,7 +632,6 @@
 
         <div class="grid-3">
 
-            <!-- 1. BLACK FORTRESS -->
             <div class="card">
                 <div class="card-img">
                     <img src="campana-bulot-black-fortress.jpg" alt="Campana Black Fortress" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Black Fortress ]'">
@@ -672,7 +652,6 @@
                 </div>
             </div>
 
-            <!-- 2. TIMBER CRAFT -->
             <div class="card">
                 <div class="card-img">
                     <img src="campana-bulot-timber-craft.jpg" alt="Campana Timber Craft" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Timber Craft ]'">
@@ -693,7 +672,6 @@
                 </div>
             </div>
 
-            <!-- 3. INOX LINE -->
             <div class="card">
                 <div class="card-img">
                     <img src="campana-bulot-inox-line.jpg" alt="Campana Inox Line" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Inox Line ]'">
@@ -714,7 +692,6 @@
                 </div>
             </div>
 
-            <!-- 4. MEDITERRÁNEA BLACK -->
             <div class="card">
                 <div class="card-img">
                     <img src="campana-bulot-mediterranea-black.jpg" alt="Campana Mediterránea Black" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Mediterránea Black ]'">
@@ -738,7 +715,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 5: ACCESORIOS -->
     <section class="section" id="accesorios">
         <div class="section-header">
             <span class="section-tag">Tienda & Equipamiento</span>
@@ -748,7 +724,6 @@
 
         <div class="grid-3">
 
-            <!-- 1. SPIEDO ROTARY 15K -->
             <div class="card">
                 <div class="card-img">
                     <img src="spiedo-rotary-15k.jpg" alt="Spiedo Rotary 15K" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Spiedo Rotary 15K ]'">
@@ -769,7 +744,6 @@
                 </div>
             </div>
 
-            <!-- 2. OTTOMAN BLADE -->
             <div class="card">
                 <div class="card-img">
                     <img src="cuchillo-bulot-ottoman.jpg" alt="Cuchillo Ottoman Blade" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Ottoman Blade ]'">
@@ -790,7 +764,6 @@
                 </div>
             </div>
 
-            <!-- 3. VULCAN GLASS OVEN -->
             <div class="card">
                 <div class="card-img">
                     <img src="horno-bulot-vulcan-glass.jpg" alt="Horno a Leña Vulcan Glass Oven" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Vulcan Glass Oven ]'">
@@ -811,7 +784,6 @@
                 </div>
             </div>
 
-            <!-- 4. SMOKELESS FIREPIT -->
             <div class="card">
                 <div class="card-img">
                     <img src="fogon-smokeless.jpg" alt="Fogón Anti-Humo Smokeless Firepit" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Smokeless Firepit ]'">
@@ -832,7 +804,6 @@
                 </div>
             </div>
 
-            <!-- 5. SMOKELESS SPIT MASTER -->
             <div class="card">
                 <div class="card-img">
                     <img src="fogon-smokeless-spit.jpg" alt="Fogón Anti-Humo con Spiedo Smokeless Spit Master" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Smokeless Spit Master ]'">
@@ -856,7 +827,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 6: OTROS PROYECTOS -->
     <section class="section section-alt" id="construccion">
         <div class="section-header">
             <span class="section-tag">Obras & Cobertizos</span>
@@ -890,7 +860,6 @@
         </div>
     </section>
 
-    <!-- BANNER ASESORÍA -->
     <section class="banner-asesoria">
         <h2>¿Tienes dudas sobre qué modelo o dimensión elegir?</h2>
         <p>Te asesoramos sin compromiso sobre las mejores opciones para el espacio y presupuesto de tu proyecto.</p>
@@ -899,12 +868,9 @@
         </a>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="social-links">
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://tiktok.com" target="_blank">TikTok</a>
+            <a href="https://www.instagram.com/quinchos_prefabricados/?hl=es" target="_blank">Instagram</a>
         </div>
         <div class="footer-nav">
             <a href="#prefabricados">Prefabricados</a> | 
