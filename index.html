@@ -213,15 +213,19 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.06);
         }
 
-        .card-img {
-            height: 250px;
-            background-color: #cbd5e1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-weight: 700;
-            font-size: 14px;
+        /* Contenedor para mostrar las 3 fotos en fila horizontal por tarjeta */
+        .card-img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2px;
+            height: 220px;
+            background: #cbd5e1;
+        }
+
+        .card-img-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .card-body {
@@ -438,6 +442,7 @@
         </a>
     </section>
 
+    <!-- SECCIÓN: QUINCHOS PREFABRICADOS (3 FOTOS CADA UNO) -->
     <section class="section" id="prefabricados">
         <div class="section-header">
             <span class="section-tag">Línea Modular VIP</span>
@@ -447,8 +452,10 @@
 
         <div class="grid-3">
             <div class="card">
-                <div class="card-img">
-                    <img src="Patagonia-Prime.jpeg" alt="Quincho Patagonia Prime" style="width:100%; height:100%; object-fit:cover;" onerror="this.parentNode.innerHTML='[ Foto: Patagonia Prime ]'">
+                <div class="card-img-grid">
+                    <img src="Patagonia-Prime.jpeg" alt="Patagonia 1">
+                    <img src="Patagonia-Prime-2.jpeg" alt="Patagonia 2">
+                    <img src="Patagonia-Prime-3.jpeg" alt="Patagonia 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Robusto & Tradicional</span>
@@ -459,8 +466,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="Amalfi-Luxe.jpeg" alt="Quincho Amalfi Luxe" style="width:100%; height:100%; object-fit:cover;" onerror="this.parentNode.innerHTML='[ Foto: Amalfi Luxe ]'">
+                <div class="card-img-grid">
+                    <img src="Amalfi-Luxe.jpeg" alt="Amalfi 1">
+                    <img src="Amalfi-Luxe-2.jpeg" alt="Amalfi 2">
+                    <img src="Amalfi-Luxe-3.jpeg" alt="Amalfi 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Elegancia & Vistas Abiertas</span>
@@ -471,8 +480,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="Ápice negro.jpeg" alt="Quincho Black Apex" style="width:100%; height:100%; object-fit:cover;" onerror="this.parentNode.innerHTML='[ Foto: Black Apex ]'">
+                <div class="card-img-grid">
+                    <img src="Ápice negro.jpeg" alt="Black Apex 1">
+                    <img src="Ápice negro-2.jpeg" alt="Black Apex 2">
+                    <img src="Ápice negro-3.jpeg" alt="Black Apex 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Vanguardia Minimalista</span>
@@ -484,6 +495,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: LLAVE EN MANO -->
     <section class="section section-alt" id="llave-en-mano">
         <div class="section-header">
             <span class="section-tag">Proyectos 100% Personalizados</span>
@@ -517,6 +529,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: PARRILLAS (3 FOTOS CADA UNA) -->
     <section class="section" id="parrillas">
         <div class="section-header">
             <span class="section-tag">Línea de Fuego</span>
@@ -527,8 +540,10 @@
         <div class="grid-3">
 
             <div class="card">
-                <div class="card-img">
-                    <img src="parrilla-vulcan-pro.jpg" alt="Parrilla Vulcan Pro" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Vulcan Pro ]'">
+                <div class="card-img-grid">
+                    <img src="parrilla-vulcan-pro.jpg" alt="Vulcan Pro 1">
+                    <img src="parrilla-vulcan-pro-2.jpg" alt="Vulcan Pro 2">
+                    <img src="parrilla-vulcan-pro-3.jpg" alt="Vulcan Pro 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Potencia Industrial & Control Milimétrico</span>
@@ -547,8 +562,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="parrilla-vulcan-duo.jpg" alt="Parrilla Vulcan Duo" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Vulcan Duo ]'">
+                <div class="card-img-grid">
+                    <img src="parrilla-vulcan-duo.jpg" alt="Vulcan Duo 1">
+                    <img src="parrilla-vulcan-duo-2.jpg" alt="Vulcan Duo 2">
+                    <img src="parrilla-vulcan-duo-3.jpg" alt="Vulcan Duo 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Máximo Control & Doble Temperatura</span>
@@ -567,8 +584,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="Inox-Front-Pro-2.jpeg" alt="Parrilla Inox Front Pro" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Inox Front Pro ]'">
+                <div class="card-img-grid">
+                    <img src="Inox-Front-Pro.jpeg" alt="Inox Front 1">
+                    <img src="Inox-Front-Pro-2.jpeg" alt="Inox Front 2">
+                    <img src="Inox-Front-Pro-3.jpeg" alt="Inox Front 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Diseño Ejecutivo & Presencia Premium</span>
@@ -587,8 +606,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="parrilla-vulcan-split-dual.jpg" alt="Parrilla Vulcan Split Dual" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Vulcan Split Dual ]'">
+                <div class="card-img-grid">
+                    <img src="parrilla-vulcan-split-dual.jpg" alt="Split Dual 1">
+                    <img src="parrilla-vulcan-split-dual-2.jpg" alt="Split Dual 2">
+                    <img src="parrilla-vulcan-split-dual-3.jpg" alt="Split Dual 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Independencia Total & Dos Zonas de Fuego</span>
@@ -607,8 +628,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="parrilla-vulcan-master-fire.jpg" alt="Parrilla Vulcan Master Fire" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Vulcan Master Fire ]'">
+                <div class="card-img-grid">
+                    <img src="parrilla-vulcan-master-fire.jpg" alt="Master Fire 1">
+                    <img src="parrilla-vulcan-master-fire-2.jpg" alt="Master Fire 2">
+                    <img src="parrilla-vulcan-master-fire-3.jpg" alt="Master Fire 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Autonomía Total & Fuego Continuo</span>
@@ -629,6 +652,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: CAMPANAS (3 FOTOS CADA UNA) -->
     <section class="section section-alt" id="campanas">
         <div class="section-header">
             <span class="section-tag">Extracción & Tiro</span>
@@ -639,8 +663,10 @@
         <div class="grid-3">
 
             <div class="card">
-                <div class="card-img">
-                    <img src="Fortaleza Negra.jpeg" alt="Campana Black Fortress" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Black Fortress ]'">
+                <div class="card-img-grid">
+                    <img src="Fortaleza Negra.jpeg" alt="Fortaleza 1">
+                    <img src="Fortaleza Negra-2.jpeg" alt="Fortaleza 2">
+                    <img src="Fortaleza Negra-3.jpeg" alt="Fortaleza 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Presencia Imponente & Estilo Escultórico</span>
@@ -659,8 +685,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="campana-bulot-timber-craft.jpg" alt="Campana Timber Craft" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Timber Craft ]'">
+                <div class="card-img-grid">
+                    <img src="campana-bulot-timber-craft.jpg" alt="Timber 1">
+                    <img src="campana-bulot-timber-craft-2.jpg" alt="Timber 2">
+                    <img src="campana-bulot-timber-craft-3.jpg" alt="Timber 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Cálida Estética de Autor & Solidez Industrial</span>
@@ -679,8 +707,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="campana-bulot-inox-line.jpg" alt="Campana Inox Line" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Inox Line ]'">
+                <div class="card-img-grid">
+                    <img src="campana-bulot-inox-line.jpg" alt="Inox Line 1">
+                    <img src="campana-bulot-inox-line-2.jpg" alt="Inox Line 2">
+                    <img src="campana-bulot-inox-line-3.jpg" alt="Inox Line 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Diseño Ejecutivo & Contraste de Alta Gama</span>
@@ -699,8 +729,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="campana-bulot-mediterranea-black.jpg" alt="Campana Mediterránea Black" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Mediterránea Black ]'">
+                <div class="card-img-grid">
+                    <img src="campana-bulot-mediterranea-black.jpg" alt="Mediterranea 1">
+                    <img src="campana-bulot-mediterranea-black-2.jpg" alt="Mediterranea 2">
+                    <img src="campana-bulot-mediterranea-black-3.jpg" alt="Mediterranea 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Geometría Minimalista & Diseño de Vanguardia</span>
@@ -721,6 +753,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: ACCESORIOS -->
     <section class="section" id="accesorios">
         <div class="section-header">
             <span class="section-tag">Tienda & Equipamiento</span>
@@ -731,8 +764,10 @@
         <div class="grid-3">
 
             <div class="card">
-                <div class="card-img">
-                    <img src="spiedo-rotary-15k.jpg" alt="Spiedo Rotary 15K" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Spiedo Rotary 15K ]'">
+                <div class="card-img-grid">
+                    <img src="spiedo-rotary-15k.jpg" alt="Spiedo 1">
+                    <img src="spiedo-rotary-15k-2.jpg" alt="Spiedo 2">
+                    <img src="spiedo-rotary-15k-3.jpg" alt="Spiedo 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Cocción Homogénea & Autonomía Total</span>
@@ -751,8 +786,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="cuchillo-bulot-ottoman.jpg" alt="Cuchillo Ottoman Blade" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Ottoman Blade ]'">
+                <div class="card-img-grid">
+                    <img src="cuchillo-bulot-ottoman.jpg" alt="Cuchillo 1">
+                    <img src="cuchillo-bulot-ottoman-2.jpg" alt="Cuchillo 2">
+                    <img src="cuchillo-bulot-ottoman-3.jpg" alt="Cuchillo 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Tradición Otomana & Forja Artesanal</span>
@@ -771,8 +808,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="horno-bulot-vulcan-glass.jpg" alt="Horno a Leña Vulcan Glass Oven" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Vulcan Glass Oven ]'">
+                <div class="card-img-grid">
+                    <img src="horno-bulot-vulcan-glass.jpg" alt="Horno 1">
+                    <img src="horno-bulot-vulcan-glass-2.jpg" alt="Horno 2">
+                    <img src="horno-bulot-vulcan-glass-3.jpg" alt="Horno 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Control Visual & Doble Cámara</span>
@@ -791,8 +830,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="fogon-smokeless.jpg" alt="Fogón Anti-Humo Smokeless Firepit" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Smokeless Firepit ]'">
+                <div class="card-img-grid">
+                    <img src="fogon-smokeless.jpg" alt="Fogon 1">
+                    <img src="fogon-smokeless-2.jpg" alt="Fogon 2">
+                    <img src="fogon-smokeless-3.jpg" alt="Fogon 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Combustión Limpia & Parrilla Giratoria</span>
@@ -811,8 +852,10 @@
             </div>
 
             <div class="card">
-                <div class="card-img">
-                    <img src="fogon-smokeless-spit.jpg" alt="Fogón Anti-Humo con Spiedo Smokeless Spit Master" style="width:100%; height:100%; object-fit:contain; padding:15px;" onerror="this.parentNode.innerHTML='[ Foto: Smokeless Spit Master ]'">
+                <div class="card-img-grid">
+                    <img src="fogon-smokeless-spit.jpg" alt="Spit 1">
+                    <img src="fogon-smokeless-spit-2.jpg" alt="Spit 2">
+                    <img src="fogon-smokeless-spit-3.jpg" alt="Spit 3">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Combustión Limpia & Spiedo Automático</span>
@@ -833,6 +876,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: OTROS PROYECTOS -->
     <section class="section section-alt" id="construccion">
         <div class="section-header">
             <span class="section-tag">Obras & Cobertizos</span>
