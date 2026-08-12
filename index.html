@@ -213,20 +213,61 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.06);
         }
 
-        /* Contenedor para mostrar las 3 fotos en fila horizontal por tarjeta */
-        .card-img-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2px;
-            height: 220px;
-            background: #cbd5e1;
+        /* ESTILOS DEL CARRUSEL INTERNO DE CADA TARJETA */
+        .card-carousel {
+            position: relative;
+            height: 250px;
+            background-color: #f1f5f9;
+            overflow: hidden;
         }
 
-        .card-img-grid img {
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; /* Ocultar barra en Firefox */
+        }
+
+        .carousel-track::-webkit-scrollbar {
+            display: none; /* Ocultar barra en Chrome/Safari */
+        }
+
+        .carousel-track img {
+            flex: 0 0 100%;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            scroll-snap-align: start;
         }
+
+        /* Botones flecha para cambiar de foto en el carrusel */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            z-index: 10;
+            transition: background 0.2s;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
 
         .card-body {
             padding: 28px;
@@ -328,10 +369,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #64748b;
-            font-weight: 700;
-            text-align: center;
-            padding: 20px;
+            overflow: hidden;
+        }
+
+        .construction-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .banner-asesoria {
@@ -442,7 +486,7 @@
         </a>
     </section>
 
-    <!-- SECCIÓN: QUINCHOS PREFABRICADOS (3 FOTOS CADA UNO) -->
+    <!-- SECCIÓN: QUINCHOS PREFABRICADOS -->
     <section class="section" id="prefabricados">
         <div class="section-header">
             <span class="section-tag">Línea Modular VIP</span>
@@ -451,11 +495,16 @@
         </div>
 
         <div class="grid-3">
+            <!-- Patagonia Prime (Carrusel) -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="Patagonia-Prime.jpeg" alt="Patagonia 1">
-                    <img src="Patagonia-Prime-2.jpeg" alt="Patagonia 2">
-                    <img src="Patagonia-Prime-3.jpeg" alt="Patagonia 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="Patagonia-Prime.jpeg" alt="Patagonia 1">
+                        <img src="Patagonia-Prime-2.jpeg" alt="Patagonia 2">
+                        <img src="Patagonia-Prime-3.jpeg" alt="Patagonia 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Robusto & Tradicional</span>
@@ -465,11 +514,16 @@
                 </div>
             </div>
 
+            <!-- Amalfi Luxe (Carrusel) -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="Amalfi-Luxe.jpeg" alt="Amalfi 1">
-                    <img src="Amalfi-Luxe-2.jpeg" alt="Amalfi 2">
-                    <img src="Amalfi-Luxe-3.jpeg" alt="Amalfi 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="Amalfi-Luxe.jpeg" alt="Amalfi 1">
+                        <img src="Amalfi-Luxe-2.jpeg" alt="Amalfi 2">
+                        <img src="Amalfi-Luxe-3.jpeg" alt="Amalfi 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Elegancia & Vistas Abiertas</span>
@@ -479,11 +533,16 @@
                 </div>
             </div>
 
+            <!-- Black Apex (Carrusel) -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="Ápice negro.jpeg" alt="Black Apex 1">
-                    <img src="Ápice negro-2.jpeg" alt="Black Apex 2">
-                    <img src="Ápice negro-3.jpeg" alt="Black Apex 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="Ápice negro.jpeg" alt="Black Apex 1">
+                        <img src="Ápice negro-2.jpeg" alt="Black Apex 2">
+                        <img src="Ápice negro-3.jpeg" alt="Black Apex 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Vanguardia Minimalista</span>
@@ -524,12 +583,12 @@
             </div>
 
             <div class="construction-visual">
-                <img src="Galería-Render-Quincho-Llave-en-Mano-Ejecutado.jpeg" alt="Llave en Mano" style="width:100%; height:100%; object-fit:cover; border-radius:12px;" onerror="this.parentNode.innerHTML='[ Galería / Render: Quincho Llave en Mano Ejecutado ]'">
+                <img src="Galería-Render-Quincho-Llave-en-Mano-Ejecutado.jpeg" alt="Llave en Mano" onerror="this.parentNode.innerHTML='[ Galería / Render: Quincho Llave en Mano Ejecutado ]'">
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN: PARRILLAS (3 FOTOS CADA UNA) -->
+    <!-- SECCIÓN: PARRILLAS (Carrusel con flechas) -->
     <section class="section" id="parrillas">
         <div class="section-header">
             <span class="section-tag">Línea de Fuego</span>
@@ -539,11 +598,16 @@
 
         <div class="grid-3">
 
+            <!-- Vulcan Pro -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="parrilla-vulcan-pro.jpg" alt="Vulcan Pro 1">
-                    <img src="parrilla-vulcan-pro-2.jpg" alt="Vulcan Pro 2">
-                    <img src="parrilla-vulcan-pro-3.jpg" alt="Vulcan Pro 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="parrilla-vulcan-pro.jpg" alt="Pro 1">
+                        <img src="parrilla-vulcan-pro-2.jpg" alt="Pro 2">
+                        <img src="parrilla-vulcan-pro-3.jpg" alt="Pro 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Potencia Industrial & Control Milimétrico</span>
@@ -561,11 +625,16 @@
                 </div>
             </div>
 
+            <!-- Vulcan Duo -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="parrilla-vulcan-duo.jpg" alt="Vulcan Duo 1">
-                    <img src="parrilla-vulcan-duo-2.jpg" alt="Vulcan Duo 2">
-                    <img src="parrilla-vulcan-duo-3.jpg" alt="Vulcan Duo 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="parrilla-vulcan-duo.jpg" alt="Duo 1">
+                        <img src="parrilla-vulcan-duo-2.jpg" alt="Duo 2">
+                        <img src="parrilla-vulcan-duo-3.jpg" alt="Duo 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Máximo Control & Doble Temperatura</span>
@@ -583,11 +652,16 @@
                 </div>
             </div>
 
+            <!-- Inox Front Pro -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="Inox-Front-Pro.jpeg" alt="Inox Front 1">
-                    <img src="Inox-Front-Pro-2.jpeg" alt="Inox Front 2">
-                    <img src="Inox-Front-Pro-3.jpeg" alt="Inox Front 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="Inox-Front-Pro.jpeg" alt="Inox 1">
+                        <img src="Inox-Front-Pro-2.jpeg" alt="Inox 2">
+                        <img src="Inox-Front-Pro-3.jpeg" alt="Inox 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Diseño Ejecutivo & Presencia Premium</span>
@@ -605,11 +679,16 @@
                 </div>
             </div>
 
+            <!-- Vulcan Split Dual -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="parrilla-vulcan-split-dual.jpg" alt="Split Dual 1">
-                    <img src="parrilla-vulcan-split-dual-2.jpg" alt="Split Dual 2">
-                    <img src="parrilla-vulcan-split-dual-3.jpg" alt="Split Dual 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="parrilla-vulcan-split-dual.jpg" alt="Split 1">
+                        <img src="parrilla-vulcan-split-dual-2.jpg" alt="Split 2">
+                        <img src="parrilla-vulcan-split-dual-3.jpg" alt="Split 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Independencia Total & Dos Zonas de Fuego</span>
@@ -627,11 +706,16 @@
                 </div>
             </div>
 
+            <!-- Vulcan Master Fire -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="parrilla-vulcan-master-fire.jpg" alt="Master Fire 1">
-                    <img src="parrilla-vulcan-master-fire-2.jpg" alt="Master Fire 2">
-                    <img src="parrilla-vulcan-master-fire-3.jpg" alt="Master Fire 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="parrilla-vulcan-master-fire.jpg" alt="Master 1">
+                        <img src="parrilla-vulcan-master-fire-2.jpg" alt="Master 2">
+                        <img src="parrilla-vulcan-master-fire-3.jpg" alt="Master 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Autonomía Total & Fuego Continuo</span>
@@ -652,7 +736,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: CAMPANAS (3 FOTOS CADA UNA) -->
+    <!-- SECCIÓN: CAMPANAS (Carrusel con flechas) -->
     <section class="section section-alt" id="campanas">
         <div class="section-header">
             <span class="section-tag">Extracción & Tiro</span>
@@ -662,11 +746,16 @@
 
         <div class="grid-3">
 
+            <!-- Black Fortress -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="Fortaleza Negra.jpeg" alt="Fortaleza 1">
-                    <img src="Fortaleza Negra-2.jpeg" alt="Fortaleza 2">
-                    <img src="Fortaleza Negra-3.jpeg" alt="Fortaleza 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="Fortaleza Negra.jpeg" alt="Fortaleza 1">
+                        <img src="Fortaleza Negra-2.jpeg" alt="Fortaleza 2">
+                        <img src="Fortaleza Negra-3.jpeg" alt="Fortaleza 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Presencia Imponente & Estilo Escultórico</span>
@@ -684,11 +773,16 @@
                 </div>
             </div>
 
+            <!-- Timber Craft -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="campana-bulot-timber-craft.jpg" alt="Timber 1">
-                    <img src="campana-bulot-timber-craft-2.jpg" alt="Timber 2">
-                    <img src="campana-bulot-timber-craft-3.jpg" alt="Timber 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="campana-bulot-timber-craft.jpg" alt="Timber 1">
+                        <img src="campana-bulot-timber-craft-2.jpg" alt="Timber 2">
+                        <img src="campana-bulot-timber-craft-3.jpg" alt="Timber 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Cálida Estética de Autor & Solidez Industrial</span>
@@ -706,11 +800,16 @@
                 </div>
             </div>
 
+            <!-- Inox Line -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="campana-bulot-inox-line.jpg" alt="Inox Line 1">
-                    <img src="campana-bulot-inox-line-2.jpg" alt="Inox Line 2">
-                    <img src="campana-bulot-inox-line-3.jpg" alt="Inox Line 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="campana-bulot-inox-line.jpg" alt="Inox Line 1">
+                        <img src="campana-bulot-inox-line-2.jpg" alt="Inox Line 2">
+                        <img src="campana-bulot-inox-line-3.jpg" alt="Inox Line 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Diseño Ejecutivo & Contraste de Alta Gama</span>
@@ -728,11 +827,16 @@
                 </div>
             </div>
 
+            <!-- Mediterránea Black -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="campana-bulot-mediterranea-black.jpg" alt="Mediterranea 1">
-                    <img src="campana-bulot-mediterranea-black-2.jpg" alt="Mediterranea 2">
-                    <img src="campana-bulot-mediterranea-black-3.jpg" alt="Mediterranea 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="campana-bulot-mediterranea-black.jpg" alt="Mediterranea 1">
+                        <img src="campana-bulot-mediterranea-black-2.jpg" alt="Mediterranea 2">
+                        <img src="campana-bulot-mediterranea-black-3.jpg" alt="Mediterranea 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Geometría Minimalista & Diseño de Vanguardia</span>
@@ -763,11 +867,16 @@
 
         <div class="grid-3">
 
+            <!-- Spiedo -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="spiedo-rotary-15k.jpg" alt="Spiedo 1">
-                    <img src="spiedo-rotary-15k-2.jpg" alt="Spiedo 2">
-                    <img src="spiedo-rotary-15k-3.jpg" alt="Spiedo 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="spiedo-rotary-15k.jpg" alt="Spiedo 1">
+                        <img src="spiedo-rotary-15k-2.jpg" alt="Spiedo 2">
+                        <img src="spiedo-rotary-15k-3.jpg" alt="Spiedo 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Cocción Homogénea & Autonomía Total</span>
@@ -785,11 +894,16 @@
                 </div>
             </div>
 
+            <!-- Cuchillo Ottoman -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="cuchillo-bulot-ottoman.jpg" alt="Cuchillo 1">
-                    <img src="cuchillo-bulot-ottoman-2.jpg" alt="Cuchillo 2">
-                    <img src="cuchillo-bulot-ottoman-3.jpg" alt="Cuchillo 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="cuchillo-bulot-ottoman.jpg" alt="Cuchillo 1">
+                        <img src="cuchillo-bulot-ottoman-2.jpg" alt="Cuchillo 2">
+                        <img src="cuchillo-bulot-ottoman-3.jpg" alt="Cuchillo 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Tradición Otomana & Forja Artesanal</span>
@@ -807,11 +921,16 @@
                 </div>
             </div>
 
+            <!-- Horno Vulcan Glass -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="horno-bulot-vulcan-glass.jpg" alt="Horno 1">
-                    <img src="horno-bulot-vulcan-glass-2.jpg" alt="Horno 2">
-                    <img src="horno-bulot-vulcan-glass-3.jpg" alt="Horno 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="horno-bulot-vulcan-glass.jpg" alt="Horno 1">
+                        <img src="horno-bulot-vulcan-glass-2.jpg" alt="Horno 2">
+                        <img src="horno-bulot-vulcan-glass-3.jpg" alt="Horno 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Control Visual & Doble Cámara</span>
@@ -829,11 +948,16 @@
                 </div>
             </div>
 
+            <!-- Smokeless Firepit -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="fogon-smokeless.jpg" alt="Fogon 1">
-                    <img src="fogon-smokeless-2.jpg" alt="Fogon 2">
-                    <img src="fogon-smokeless-3.jpg" alt="Fogon 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="fogon-smokeless.jpg" alt="Fogon 1">
+                        <img src="fogon-smokeless-2.jpg" alt="Fogon 2">
+                        <img src="fogon-smokeless-3.jpg" alt="Fogon 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Combustión Limpia & Parrilla Giratoria</span>
@@ -851,11 +975,16 @@
                 </div>
             </div>
 
+            <!-- Smokeless Spit Master -->
             <div class="card">
-                <div class="card-img-grid">
-                    <img src="fogon-smokeless-spit.jpg" alt="Spit 1">
-                    <img src="fogon-smokeless-spit-2.jpg" alt="Spit 2">
-                    <img src="fogon-smokeless-spit-3.jpg" alt="Spit 3">
+                <div class="card-carousel">
+                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="carousel-track">
+                        <img src="fogon-smokeless-spit.jpg" alt="Spit 1">
+                        <img src="fogon-smokeless-spit-2.jpg" alt="Spit 2">
+                        <img src="fogon-smokeless-spit-3.jpg" alt="Spit 3">
+                    </div>
+                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Combustión Limpia & Spiedo Automático</span>
@@ -905,7 +1034,7 @@
             </div>
 
             <div class="construction-visual">
-                <img src="Galería-Render-Cobertizo-Estructura-Exterior.jpeg" alt="Cobertizo" style="width:100%; height:100%; object-fit:cover; border-radius:12px;" onerror="this.parentNode.innerHTML='[ Galería / Render: Cobertizo & Estructura Exterior ]'">
+                <img src="Galería-Render-Cobertizo-Estructura-Exterior.jpeg" alt="Cobertizo" onerror="this.parentNode.innerHTML='[ Galería / Render: Cobertizo & Estructura Exterior ]'">
             </div>
         </div>
     </section>
@@ -935,5 +1064,14 @@
         <p>© 2026 BULOT Quinchos & Construcción. Todos los derechos reservados BULOT SpA. Rut: 77.699.476-6.</p>
     </footer>
 
+    <!-- SCRIPT PARA EL FUNCIONAMIENTO DE LOS BOTONES DEL CARRUSEL -->
+    <script>
+        function scrollCarousel(button, direction) {
+            const cardCarousel = button.closest('.card-carousel');
+            const track = cardCarousel.querySelector('.carousel-track');
+            const scrollAmount = track.clientWidth * direction;
+            track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
