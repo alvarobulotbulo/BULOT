@@ -213,6 +213,19 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.06);
         }
 
+        /* ESTILO PARA FOTO FIJA EN PREFABRICADOS */
+        .card-img-fixed {
+            height: 250px;
+            background-color: #f1f5f9;
+            overflow: hidden;
+        }
+
+        .card-img-fixed img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .card-carousel {
             position: relative;
             height: 250px;
@@ -475,7 +488,7 @@
         </a>
     </section>
 
-    <!-- QUINCHOS PREFABRICADOS -->
+    <!-- QUINCHOS PREFABRICADOS (FOTO ÚNICA FIJA) -->
     <section class="section" id="prefabricados">
         <div class="section-header">
             <span class="section-tag">Línea Modular VIP</span>
@@ -485,14 +498,8 @@
 
         <div class="grid-3">
             <div class="card">
-                <div class="card-carousel">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
-                    <div class="carousel-track">
-                        <img src="img/Patagonia-Prime.jpeg" alt="Patagonia 1">
-                        <img src="img/Patagonia-Prime-2.jpeg" alt="Patagonia 2">
-                        <img src="img/Patagonia-Prime-3.jpeg" alt="Patagonia 3">
-                    </div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
+                <div class="card-img-fixed">
+                    <img src="img/Patagonia-Prime.jpeg" alt="Patagonia Prime">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Robusto & Tradicional</span>
@@ -503,14 +510,8 @@
             </div>
 
             <div class="card">
-                <div class="card-carousel">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
-                    <div class="carousel-track">
-                        <img src="img/Amalfi-Luxe.jpeg" alt="Amalfi 1">
-                        <img src="img/Amalfi-Luxe-2.jpeg" alt="Amalfi 2">
-                        <img src="img/Amalfi-Luxe-3.jpeg" alt="Amalfi 3">
-                    </div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
+                <div class="card-img-fixed">
+                    <img src="img/Amalfi-Luxe.jpeg" alt="Amalfi Luxe">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Elegancia & Vistas Abiertas</span>
@@ -521,14 +522,8 @@
             </div>
 
             <div class="card">
-                <div class="card-carousel">
-                    <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
-                    <div class="carousel-track">
-                        <img src="img/Black-Apex.jpeg" alt="Apex 1">
-                        <img src="img/Black-Apex-2.jpeg" alt="Apex 2">
-                        <img src="img/Black-Apex-3.jpeg" alt="Apex 3">
-                    </div>
-                    <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
+                <div class="card-img-fixed">
+                    <img src="img/Black-Apex.jpeg" alt="Black Apex">
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle">Vanguardia Minimalista</span>
