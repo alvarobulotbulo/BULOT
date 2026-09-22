@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulot SpA | Parrillas, Quinchos y Equipamiento</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SDK de Mercado Pago -->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <!-- Instagram Embed Script -->
+    <script async src="//www.instagram.com/embed.js"></script>
+</head>
+<body class="bg-white text-zinc-900 font-sans scroll-smooth">
+
+    <!-- Barra Superior / Anuncio -->
+    <div class="bg-zinc-100 text-zinc-700 text-xs md:text-sm text-center py-2.5 px-4 font-medium border-b border-zinc-200">
+        <span>🚚 ¡Envíos y Despachos a todo Chile!</span>
+    </div>
+
+    <!-- Header / Menú Principal (Estilo Apple) -->
+    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-zinc-100">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-wider text-zinc-900">BULOT <span class="text-orange-600 font-normal">Quinchos & Parrillas</span></h1>
+            
+            <nav class="hidden lg:flex space-x-6 text-sm font-medium text-zinc-600">
+                <a href="#catalogo" class="hover:text-zinc-900 transition">Catálogo</a>
+                <a href="#parrillas" class="hover:text-zinc-900 transition">Parrillas</a>
+                <a href="#campanas" class="hover:text-zinc-900 transition">Campanas</a>
+                <a href="#puertas" class="hover:text-zinc-900 transition">Puertas</a>
+                <a href="#hornos" class="hover:text-zinc-900 transition">Hornos</a>
+                <a href="#accesorios" class="hover:text-zinc-900 transition">Accesorios</a>
+                <a href="#quincho-armador" class="text-orange-600 font-bold hover:text-orange-700 transition">Quincho Prefabricado</a>
+            </nav>
+
+            <!-- Botón Carrito Flotante Trigger -->
+            <button onclick="toggleCart()" class="bg-zinc-900 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-2 hover:bg-zinc-800 transition shadow-sm">
+                <span>🛒 Carrito</span>
+                <span id="cart-count" class="bg-orange-600 text-white text-xs px-2 py-0.5 rounded-full">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION CON VIDEO DE FONDO -->
+    <section class="relative bg-zinc-900 text-white py-28 md:py-36 px-4 overflow-hidden border-b border-zinc-800">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-50 scale-105">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-barbecue-with-meat-and-sausages-on-the-grill-41662-large.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/90 via-zinc-900/80 to-zinc-950/90"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <span class="text-xs font-semibold uppercase tracking-widest text-orange-400 bg-orange-950/80 border border-orange-500/30 px-3 py-1.5 rounded-full inline-block mb-4 shadow-sm">Fabricación Nacional</span>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">Equipamiento y Quinchos de Alta Calidad.</h2>
+            <p class="text-zinc-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light leading-relaxed">Parrillas robustas, campanas de alta eficiencia, puertas, hornos y nuestro modelo exclusivo de quincho prefabricado con envíos a todo Chile.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4">
+                <a href="#catalogo" class="w-full sm:w-auto bg-white text-zinc-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-zinc-100 transition text-base">Ver Catálogo Completo</a>
+                <a href="#quincho-armador" class="w-full sm:w-auto bg-orange-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-orange-700 transition text-base">Arma tu Quincho</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO GENERAL -->
+    <section id="catalogo" class="max-w-7xl mx-auto px-4 py-20">
+        <div class="mb-12 text-center">
+            <h3 class="text-3xl font-bold tracking-tight">Catálogo General</h3>
+            <p class="text-zinc-500 mt-2">Haz clic en cualquier producto para cotizar a medida y ver especificaciones.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div onclick="openGrillModal('Parrilla Simple a Medida', 190000, 'Sistema de elevación suave con manivela lateral. Estructura de hierro con pintura Calorkote 400°C; rejilla y bandeja recolectora de grasa en acero inoxidable AISI 304. Soldadura MIG y tratamiento químico con químicos pasivantes y decapantes. Fondo estandarizado a 60cm.', ['imagenes/parrilla-simple-1.jpeg', 'imagenes/parrilla-simple-2.jpeg', 'imagenes/parrilla-simple-3.jpeg'], 'simple')" class="bg-zinc-50 p-6 rounded-2xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="bg-zinc-200 h-40 rounded-xl mb-4 overflow-hidden flex items-center justify-center">
+                        <img src="imagenes/parrilla-simple-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Parrilla">
+                    </div>
+                    <h4 class="font-bold text-base mb-1">Parrilla Simple a Medida</h4>
+                    <p class="text-zinc-500 text-xs mb-4">Inoxidable AISI 304 & Hierro Calorkote.</p>
+                    <p class="font-bold text-xl text-zinc-900 mb-4">Desde $190.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-2.5 rounded-xl text-xs font-semibold group-hover:bg-orange-600 transition">Medir Espacio y Ver</span>
+            </div>
+
+            <div onclick="openHoodModal('Campana Tradicional', 195000, 'Campana extractora de alta eficiencia (95% de retención de humos), fabricada en acero reforzado con pintura electrostática y diseño tradicional.', ['imagenes/campana-tradicional-1.jpeg', 'imagenes/campana-tradicional-2.jpeg', 'imagenes/campana-tradicional-3.jpeg'])" class="bg-zinc-50 p-6 rounded-2xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="bg-zinc-200 h-40 rounded-xl mb-4 overflow-hidden flex items-center justify-center">
+                        <img src="imagenes/campana-tradicional-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Campana">
+                    </div>
+                    <h4 class="font-bold text-base mb-1">Campana Tradicional</h4>
+                    <p class="text-zinc-500 text-xs mb-4">95% eficiencia extracción.</p>
+                    <p class="font-bold text-xl text-zinc-900 mb-4">Desde $195.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-2.5 rounded-xl text-xs font-semibold group-hover:bg-orange-600 transition">Medir Espacio y Ver</span>
+            </div>
+
+            <a href="#puertas" class="bg-zinc-50 p-6 rounded-2xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="bg-zinc-200 h-40 rounded-xl mb-4 overflow-hidden flex items-center justify-center">
+                        <img src="imagenes/puerta-quincho-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Puertas">
+                    </div>
+                    <h4 class="font-bold text-base mb-1">Puertas a Medida</h4>
+                    <p class="text-zinc-500 text-xs mb-4">Metal, soldadura MIG y madera 2"x1".</p>
+                    <p class="font-bold text-xl text-zinc-900 mb-4">Desde $80.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-2.5 rounded-xl text-xs font-semibold group-hover:bg-orange-600 transition">Ver Medidor</span>
+            </a>
+
+            <a href="#accesorios" class="bg-zinc-50 p-6 rounded-2xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="bg-zinc-200 h-40 rounded-xl mb-4 overflow-hidden flex items-center justify-center">
+                        <img src="imagenes/kit-asador-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Accesorios">
+                    </div>
+                    <h4 class="font-bold text-base mb-1">Kit Asador & Spiedos</h4>
+                    <p class="text-zinc-500 text-xs mb-4">Spiedo 30kg y fogón anti-humo.</p>
+                    <p class="font-bold text-xl text-zinc-900 mb-4">Desde $150.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-2.5 rounded-xl text-xs font-semibold group-hover:bg-orange-600 transition">Ver Accesorios</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- PARRILLAS -->
+    <section id="parrillas" class="max-w-7xl mx-auto px-4 py-16 border-t border-zinc-100">
+        <div class="mb-10">
+            <h3 class="text-2xl font-bold tracking-tight">Parrillas</h3>
+            <p class="text-zinc-500 text-sm mt-1">Sistemas de elevación con manivela y acero inoxidable de alta durabilidad fabricados a medida.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div onclick="openGrillModal('Parrilla Simple a Medida', 190000, 'Control preciso de temperatura. Estructura de hierro con pintura Calorkote 400°C; rejilla y bandeja recolectora de grasa en acero inoxidable AISI 304. Soldadura MIG y tratamiento con químicos pasivantes y decapantes. Fondo estandarizado a 60 cm máximo.', ['imagenes/parrilla-simple-1.jpeg', 'imagenes/parrilla-simple-2.jpeg', 'imagenes/parrilla-simple-3.jpeg'], 'simple')" class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="h-48 rounded-2xl mb-4 overflow-hidden bg-zinc-200">
+                        <img src="imagenes/parrilla-simple-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition">
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">Parrilla Simple a Medida</h4>
+                    <p class="text-zinc-600 text-sm mb-6 leading-relaxed">Sistema elevable estándar con rejilla y bandeja en acero inoxidable 304.</p>
+                    <p class="font-bold text-3xl text-zinc-900 mb-6">$190.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-3 rounded-xl text-sm font-semibold group-hover:bg-orange-600 transition shadow-sm">Medir Espacio y Cotizar</span>
+            </div>
+
+            <div onclick="openGrillModal('Parrilla Simple con Tapa de Acero Inoxidable a Medida', 230000, 'Incluye tapa protectora abatible fabricada íntegramente en acero inoxidable. Estructura de hierro con pintura Calorkote 400°C; rejilla y bandeja recolectora en acero inoxidable AISI 304. Soldadura MIG y tratamiento pasivante/decapante. Fondo estandarizado a 60 cm máximo.', ['imagenes/parrilla-tapa-1.jpeg', 'imagenes/parrilla-tapa-2.jpeg', 'imagenes/parrilla-tapa-3.jpeg'], 'simple')" class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="h-48 rounded-2xl mb-4 overflow-hidden bg-zinc-200">
+                        <img src="imagenes/parrilla-tapa-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition">
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">Parrilla Simple con Tapa de Acero Inoxidable a Medida</h4>
+                    <p class="text-zinc-600 text-sm mb-6 leading-relaxed">Incorpora tapa abatible protectora de acero inoxidable para mayor durabilidad.</p>
+                    <p class="font-bold text-3xl text-zinc-900 mb-6">$230.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-3 rounded-xl text-sm font-semibold group-hover:bg-orange-600 transition shadow-sm">Medir Espacio y Cotizar</span>
+            </div>
+
+            <div onclick="openGrillModal('Parrilla con Sobreparrilla a Medida', 250000, 'Modelo con sobreparrilla superior para mantener alimentos tibios o cocción lenta. Estructura de hierro con pintura Calorkote 400°C; rejillas y bandeja en acero inoxidable AISI 304. Soldadura MIG con decapado y pasivado químico. Fondo estandarizado a 60 cm máximo.', ['imagenes/parrilla-sobre-1.jpeg', 'imagenes/parrilla-sobre-2.jpeg', 'imagenes/parrilla-sobre-3.jpeg'], 'simple')" class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="h-48 rounded-2xl mb-4 overflow-hidden bg-zinc-200">
+                        <img src="imagenes/parrilla-sobre-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition">
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">Parrilla con Sobreparrilla a Medida</h4>
+                    <p class="text-zinc-600 text-sm mb-6 leading-relaxed">Incluye nivel superior secundario para mantener temperatura o cocinar de forma lenta.</p>
+                    <p class="font-bold text-3xl text-zinc-900 mb-6">$250.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-3 rounded-xl text-sm font-semibold group-hover:bg-orange-600 transition shadow-sm">Medir Espacio y Cotizar</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div onclick="openGrillModal('Parrilla Doble a Medida', 290000, 'Doble nivel de cocción independiente. Estructura de hierro con pintura Calorkote 400°C; rejillas y bandejas recolectoras de grasa en acero inoxidable AISI 304. Soldadura MIG y tratamiento químico pasivante/decapante. Fondo estandarizado a 60 cm máximo.', ['imagenes/parrilla-doble-1.jpeg', 'imagenes/parrilla-doble-2.jpeg', 'imagenes/parrilla-doble-3.jpeg'], 'doble')" class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="h-48 rounded-2xl mb-4 overflow-hidden bg-zinc-200">
+                        <img src="imagenes/parrilla-doble-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition">
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">Parrilla Doble a Medida</h4>
+                    <p class="text-zinc-600 text-sm mb-6 leading-relaxed">Doble nivel de cocción independiente para alta demanda en tus asados.</p>
+                    <p class="font-bold text-3xl text-zinc-900 mb-6">$290.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-3 rounded-xl text-sm font-semibold group-hover:bg-orange-600 transition shadow-sm">Medir Espacio y Cotizar</span>
+            </div>
+
+            <div onclick="openGrillModal('Parrilla Doble con Leñero a Medida', 340000, 'Espacio para combustión a leña y control lateral. Estructura de hierro con pintura Calorkote 400°C; rejillas y bandejas recolectoras de grasa en acero inoxidable AISI 304. Soldadura MIG y tratamiento químico especializado. Fondo estandarizado a 60 cm máximo.', ['imagenes/parrilla-lenero-1.jpeg', 'imagenes/parrilla-lenero-2.jpeg', 'imagenes/parrilla-lenero-3.jpeg'], 'lenero')" class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="h-48 rounded-2xl mb-4 overflow-hidden bg-zinc-200">
+                        <img src="imagenes/parrilla-lenero-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition">
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">Parrilla Doble con Leñero a Medida</h4>
+                    <p class="text-zinc-600 text-sm mb-6 leading-relaxed">Espacio para combustión a leña y control lateral con doble elevación.</p>
+                    <p class="font-bold text-3xl text-zinc-900 mb-6">$340.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-3 rounded-xl text-sm font-semibold group-hover:bg-orange-600 transition shadow-sm">Medir Espacio y Cotizar</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAMPANAS -->
+    <section id="campanas" class="max-w-7xl mx-auto px-4 py-16 border-t border-zinc-100">
+        <div class="mb-10">
+            <h3 class="text-2xl font-bold tracking-tight">Campanas</h3>
+            <p class="text-zinc-500 text-sm mt-1">Alta eficiencia en extracción de humos (95%) con diseños especializados a medida.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div onclick="openHoodModal('Campana Tradicional', 195000, 'Campana extractora de alta eficiencia (95% de retención de humos), fabricada en acero reforzado con pintura electrostática.', ['imagenes/campana-tradicional-1.jpeg', 'imagenes/campana-tradicional-2.jpeg', 'imagenes/campana-tradicional-3.jpeg'])" class="bg-zinc-50 p-6 rounded-3xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="h-44 rounded-2xl mb-4 overflow-hidden bg-zinc-200">
+                        <img src="imagenes/campana-tradicional-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition">
+                    </div>
+                    <h4 class="font-bold text-lg mb-1">Campana Tradicional</h4>
+                    <p class="text-zinc-600 text-xs mb-4">Diseño clásico con alta eficiencia de extracción.</p>
+                    <p class="font-bold text-2xl text-zinc-900 mb-4">Desde $195.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-2.5 rounded-xl text-xs font-semibold group-hover:bg-orange-600 transition shadow-sm">Medir Espacio y Cotizar</span>
+            </div>
+
+            <div onclick="openHoodModal('Campana con Madera Decorativa Insertada', 195000, 'Campana con detalles de madera noble insertada que aporta elegancia y calidez a tu quincho.', ['imagenes/campana-madera-1.jpeg', 'imagenes/campana-madera-2.jpeg', 'imagenes/campana-madera-3.jpeg'])" class="bg-zinc-50 p-6 rounded-3xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="h-44 rounded-2xl mb-4 overflow-hidden bg-zinc-200">
+                        <img src="imagenes/campana-madera-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition">
+                    </div>
+                    <h4 class="font-bold text-lg mb-1">Campana con Madera Decorativa</h4>
+                    <p class="text-zinc-600 text-xs mb-4">Elegante combinación con detalles en madera insertada.</p>
+                    <p class="font-bold text-2xl text-zinc-900 mb-4">Desde $195.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-2.5 rounded-xl text-xs font-semibold group-hover:bg-orange-600 transition shadow-sm">Medir Espacio y Cotizar</span>
+            </div>
+
+            <div onclick="openHoodModal('Campana con Decoración de Acero Inoxidable', 195000, 'Campana con terminaciones y molduras decorativas en acero inoxidable brillante.', ['imagenes/campana-inox-1.jpeg', 'imagenes/campana-inox-2.jpeg', 'imagenes/campana-inox-3.jpeg'])" class="bg-zinc-50 p-6 rounded-3xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="h-44 rounded-2xl mb-4 overflow-hidden bg-zinc-200">
+                        <img src="imagenes/campana-inox-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition">
+                    </div>
+                    <h4 class="font-bold text-lg mb-1">Campana con Decoración Inoxidable</h4>
+                    <p class="text-zinc-600 text-xs mb-4">Molduras y detalles en acero inoxidable.</p>
+                    <p class="font-bold text-2xl text-zinc-900 mb-4">Desde $195.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-2.5 rounded-xl text-xs font-semibold group-hover:bg-orange-600 transition shadow-sm">Medir Espacio y Cotizar</span>
+            </div>
+
+            <div onclick="openHoodModal('Campana Mediterránea', 290000, 'Campana de diseño moderno y líneas rectas, ideal para quinchos de estilo contemporáneo.', ['imagenes/campana-mediterranea-1.jpeg', 'imagenes/campana-mediterranea-2.jpeg', 'imagenes/campana-mediterranea-3.jpeg'])" class="bg-zinc-50 p-6 rounded-3xl border border-zinc-200/60 flex flex-col justify-between cursor-pointer hover:shadow-lg transition group">
+                <div>
+                    <div class="h-44 rounded-2xl mb-4 overflow-hidden bg-zinc-200">
+                        <img src="imagenes/campana-mediterranea-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition">
+                    </div>
+                    <h4 class="font-bold text-lg mb-1">Campana Mediterránea</h4>
+                    <p class="text-zinc-600 text-xs mb-4">Diseño moderno, limpio y de líneas rectas.</p>
+                    <p class="font-bold text-2xl text-zinc-900 mb-4">Desde $290.000</p>
+                </div>
+                <span class="w-full bg-zinc-900 text-white text-center py-2.5 rounded-xl text-xs font-semibold group-hover:bg-orange-600 transition shadow-sm">Medir Espacio y Cotizar</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUERTAS PARA QUINCHO -->
+    <section id="puertas" class="max-w-7xl mx-auto px-4 py-16 border-t border-zinc-100">
+        <div class="mb-10">
+            <h3 class="text-2xl font-bold tracking-tight">Puertas para Quincho</h3>
+            <p class="text-zinc-500 text-sm mt-1">Fabricamos las puertas a medida para tu quincho con altos estándares de resistencia y estética.</p>
+            <p class="text-orange-600 font-medium text-xs mt-2 italic">"Las puertas nunca le quedan bien a los maestros... bueno, ¡a nosotros nos quedan perfectas!"</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Columna Izquierda: Tarjeta del Producto -->
+            <div class="lg:col-span-6 bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 flex flex-col justify-between">
+                <div>
+                    <div class="h-56 rounded-2xl mb-4 overflow-hidden bg-zinc-200">
+                        <img src="imagenes/puerta-quincho-1.jpeg" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">Puertas Metálicas a Medida</h4>
+                    <p class="text-zinc-600 text-sm mb-4 leading-relaxed">Estructura de ángulos con soldadura MIG y pintura multiacción (3 en 1: esmalte, anticorrosivo y convertidor de óxido), combinadas con maderas de 2"x1" horizontales.</p>
+                </div>
+                <div>
+                    <p id="inline-door-price" class="font-bold text-3xl text-orange-600 mb-4">$80.000</p>
+                    <div class="bg-white p-4 rounded-2xl border border-zinc-200 text-xs text-zinc-600 space-y-1">
+                        <p>• <strong>Estructura:</strong> Metálica con ángulos resistentes</p>
+                        <p>• <strong>Soldadura:</strong> MIG de alta calidad</p>
+                        <p>• <strong>Pintura:</strong> Multiacción (3 en 1)</p>
+                        <p>• <strong>Madera:</strong> 2"x1" en disposición horizontal</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Medidor Automático en Vivo -->
+            <div class="lg:col-span-6 bg-orange-50/70 p-8 rounded-3xl border border-orange-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h4 class="font-bold text-lg text-zinc-900 mb-2">Mide el espacio (Alto x Ancho)</h4>
+                    <p class="text-xs text-zinc-600 mb-6 leading-relaxed">Ingresa las medidas del vano. El sistema calcula automáticamente cuántas puertas necesitas ($80.000 c/u hasta 90x60 cm).</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-[11px] font-bold text-zinc-500 uppercase mb-1">Alto (cm)</label>
+                            <input type="number" id="inline-door-alto" value="80" oninput="evaluateInlineDoorSpace()" class="w-full bg-white border border-zinc-300 rounded-xl p-3 text-zinc-900 text-base font-bold focus:outline-none focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold text-zinc-500 uppercase mb-1">Ancho (cm)</label>
+                            <input type="number" id="inline-door-ancho" value="50" oninput="evaluateInlineDoorSpace()" class="w-full bg-white border border-zinc-300 rounded-xl p-3 text-zinc-900 text-base font-bold focus:outline-none focus:border-orange-500">
+                        </div>
+                    </div>
+
+                    <div id="inline-door-evaluation-box" class="bg-white p-4 rounded-2xl border border-orange-200 text-xs text-zinc-700 mb-6 leading-relaxed"></div>
+                </div>
+
+                <button onclick="addInlineDoorToCart()" class="w-full bg-zinc-900 text-white font-bold py-4 rounded-xl hover:bg-orange-600 transition text-center shadow-md text-sm">Agregar Puertas al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- HORNOS -->
+    <section id="hornos" class="max-w-7xl mx-auto px-4 py-16 border-t border-zinc-100">
+        <div class="mb-10">
+            <h3 class="text-2xl font-bold tracking-tight">Hornos</h3>
+            <p class="text-zinc-500 text-sm mt-1">Artefactos de alta inercia térmica y cocción limpia para terrazas y quinchos.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Columna Izquierda: Tarjeta del Producto con Imagen -->
+            <div class="lg:col-span-6 bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 flex flex-col justify-between">
+                <div>
+                    <div class="h-64 md:h-80 rounded-2xl mb-4 overflow-hidden bg-zinc-200 border border-zinc-200">
+                        <img src="imagenes/horno-mendocino-1.jpeg" class="w-full h-full object-cover" alt="Horno Mendocino a Leña">
+                    </div>
+                    <h4 class="font-bold text-2xl mb-2 text-zinc-900">Horno Mendocino a Leña</h4>
+                    <p class="text-zinc-600 text-sm mb-4 leading-relaxed">Artefacto de doble cámara (fuego abajo y cocción limpia arriba) diseñado principalmente para quinchos y terrazas.</p>
+                </div>
+                <div>
+                    <p class="font-bold text-3xl text-orange-600 mb-4">$490.000</p>
+                    <button onclick="addOvenToCart()" class="w-full bg-zinc-900 text-white font-bold py-4 rounded-xl hover:bg-orange-600 transition text-center shadow-md text-sm">Agregar Horno al Carrito</button>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Especificaciones Técnicas Detalladas -->
+            <div class="lg:col-span-6 bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 space-y-6">
+                <div>
+                    <h4 class="font-bold text-xl text-zinc-900 mb-3">Especificaciones Técnicas Principales</h4>
+                    <ul class="space-y-3 text-sm text-zinc-700 leading-relaxed">
+                        <li class="flex items-start space-x-2">
+                            <span class="text-orange-600 font-bold">•</span>
+                            <div><strong>Estructura y materiales:</strong> Fabricado en acero o chapa de alta resistencia de 2 mm a 4 mm de espesor en su cuerpo principal y cámara de combustión.</div>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-orange-600 font-bold">•</span>
+                            <div><strong>Base y interior:</strong> Cuenta con piso o refuerzo de ladrillos refractarios intercambiables para optimizar la retención y distribución del calor.</div>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-orange-600 font-bold">•</span>
+                            <div><strong>Sistema de combustión:</strong> Posee una cámara de fuego inferior con regulador de entrada de aire (tiraje) en la puerta para controlar la intensidad de la llama.</div>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-orange-600 font-bold">•</span>
+                            <div><strong>Control de temperatura:</strong> Incorpora reloj pirómetro integrado para monitorear con precisión el proceso de cocción.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-orange-50/60 p-4 rounded-2xl border border-orange-100">
+                    <p class="text-xs text-zinc-600 leading-relaxed">✨ <strong>Diseño de doble cámara:</strong> Permite separar totalmente el fuego de los alimentos, logrando una cocción limpia, higiénica y de sabor inigualable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACCESORIOS (SPIEDOS Y FOGONES) -->
+    <section id="accesorios" class="max-w-7xl mx-auto px-4 py-16 border-t border-zinc-100">
+        <div class="mb-10">
+            <h3 class="text-2xl font-bold tracking-tight">Accesorios</h3>
+            <p class="text-zinc-500 text-sm mt-1">Complementa tu quincho con spiedos de alta capacidad y fogones anti-humo profesionales.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Producto 1: Kit Asador Grill Inox 30 kilos -->
+            <div class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 flex flex-col justify-between">
+                <div>
+                    <div class="h-64 rounded-2xl mb-4 overflow-hidden bg-zinc-200 border border-zinc-200">
+                        <img src="imagenes/kit-asador-1.jpeg" class="w-full h-full object-cover" alt="Kit Asador Grill Inox 30 kilos">
+                    </div>
+                    <h4 class="font-bold text-2xl mb-2 text-zinc-900">Kit Asador Grill Inox 30 Kilos</h4>
+                    <p class="text-zinc-600 text-sm mb-4 leading-relaxed">La solución más elegante para tu quincho. Incluye asador, motor y soportes full acero inoxidable (AISI 304) para una larga vida útil. Capacidad de carga de hasta 30 kilos (ideal para medio cordero o lechón).</p>
+                    
+                    <div class="bg-white p-4 rounded-2xl border border-zinc-200 text-xs text-zinc-600 space-y-1 mb-4">
+                        <p>• <strong>Tridente:</strong> Largo 110 cm, peso 1.7 kg, acero inoxidable AISI304 (fierro central 15 mm, tridentes 10 mm).</p>
+                        <p>• <strong>Motor:</strong> 2.5 RPM de velocidad fija, 220V, caja metálica en acero inoxidable con switch ON/OFF.</p>
+                        <p>• <strong>Embalaje:</strong> 120 x 20 x 13 cm (Peso: 6 kg).</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-bold text-3xl text-orange-600">$189.000</span>
+                    </div>
+                    <button onclick="addAccessoryToCart('Kit Asador Grill Inox 30 Kilos', 189000)" class="w-full bg-zinc-900 text-white font-bold py-3.5 rounded-xl hover:bg-orange-600 transition text-center shadow-md text-sm">Agregar Kit Asador al Carrito</button>
+                </div>
+            </div>
+
+            <!-- Producto 2: Fogón con Spiedo Smokeless Spit Master -->
+            <div class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 flex flex-col justify-between">
+                <div>
+                    <div class="h-64 rounded-2xl mb-4 overflow-hidden bg-zinc-200 border border-zinc-200">
+                        <img src="imagenes/fogon-spiedo-1.jpeg" class="w-full h-full object-cover" alt="Fogón con Spiedo Smokeless Spit Master">
+                    </div>
+                    <h4 class="font-bold text-2xl mb-2 text-zinc-900">Fogón con Spiedo Smokeless Spit Master</h4>
+                    <p class="text-zinc-600 text-sm mb-4 leading-relaxed">Fogón anti-humo equipado con sistema de spiedo eléctrico y rotación automática para cocinar piezas grandes de manera impecable en terrazas y quinchos.</p>
+                    
+                    <div class="bg-white p-4 rounded-2xl border border-zinc-200 text-xs text-zinc-600 space-y-1 mb-4">
+                        <p>• <strong>Sistema:</strong> Fogón anti-humo de alta eficiencia</p>
+                        <p>• <strong>Spiedo:</strong> Eléctrico con rotación automática</p>
+                        <p>• <strong>Uso:</strong> Ideal para terrazas y espacios sociales</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-bold text-3xl text-orange-600">$290.000</span>
+                    </div>
+                    <button onclick="addAccessoryToCart('Fogón con Spiedo Smokeless Spit Master', 290000)" class="w-full bg-zinc-900 text-white font-bold py-3.5 rounded-xl hover:bg-orange-600 transition text-center shadow-md text-sm">Agregar Fogón con Spiedo al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUINCHO PREFABRICADO (CONFIGURADOR) -->
+    <section id="quincho-armador" class="bg-zinc-900 text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto bg-zinc-800 p-8 md:p-12 rounded-3xl border border-zinc-700 shadow-2xl">
+            <div class="text-center mb-10">
+                <span class="text-xs font-semibold bg-orange-600 text-white px-3 py-1 rounded-full uppercase tracking-wider">Modelo Exclusivo</span>
+                <h3 class="text-3xl md:text-4xl font-bold mt-4 mb-2">Quincho Prefabricado</h3>
+                <p class="text-zinc-300 text-sm max-w-xl mx-auto leading-relaxed">Personaliza tu quincho base seleccionando los opcionales ideales. Envíos a todo Chile.</p>
+            </div>
+
+            <!-- Estructura en 2 Columnas -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
+                
+                <!-- Columna Izquierda: Foto Principal del Quincho -->
+                <div class="lg:col-span-5 bg-zinc-900 p-4 rounded-2xl border border-zinc-700 flex flex-col items-center justify-center text-center">
+                    <div class="w-full h-72 md:h-80 bg-zinc-800 rounded-xl overflow-hidden mb-3 border border-zinc-700">
+                        <img src="imagenes/quincho-base.jpeg" class="w-full h-full object-cover" alt="Quincho Prefabricado">
+                    </div>
+                    <span class="text-xs text-orange-400 font-medium tracking-wide uppercase">Personalízalo abajo en tiempo real ↓</span>
+                </div>
+
+                <!-- Columna Derecha: Opciones y Checkboxes -->
+                <div class="lg:col-span-7 space-y-4 bg-zinc-900 p-6 md:p-8 rounded-2xl border border-zinc-800">
+                    <div class="flex justify-between items-center border-b border-zinc-800 pb-4">
+                        <span class="font-medium text-sm md:text-base">Quincho Base Estructura Prefabricada</span>
+                        <span id="base-price-label" class="font-bold text-orange-400">$2.150.000 (Base)</span>
+                    </div>
+                    
+                    <label class="flex items-center justify-between cursor-pointer py-1 text-sm md:text-base">
+                        <span class="flex items-center space-x-3">
+                            <input type="checkbox" id="opt-horno" onchange="calculateQuinchoTotal()" class="w-5 h-5 accent-orange-600 rounded">
+                            <span>Agregar Horno Mendocino a Leña</span>
+                        </span>
+                        <span class="text-sm text-zinc-400 font-medium">+$490.000</span>
+                    </label>
+
+                    <label class="flex items-center justify-between cursor-pointer py-1 text-sm md:text-base">
+                        <span class="flex items-center space-x-3">
+                            <input type="checkbox" id="opt-lavaplatos" onchange="calculateQuinchoTotal()" class="w-5 h-5 accent-orange-600 rounded">
+                            <span>Agregar Lavaplatos + Grifería</span>
+                        </span>
+                        <span class="text-sm text-zinc-400 font-medium">+$130.000</span>
+                    </label>
+
+                    <label class="flex items-center justify-between cursor-pointer py-1 text-sm md:text-base">
+                        <span class="flex items-center space-x-3">
+                            <input type="checkbox" id="opt-spiedo" onchange="calculateQuinchoTotal()" class="w-5 h-5 accent-orange-600 rounded">
+                            <span>Agregar Kit Asador Spiedo 30kg</span>
+                        </span>
+                        <span class="text-sm text-zinc-400 font-medium">+$189.000</span>
+                    </label>
+
+                    <label class="flex items-center justify-between cursor-pointer py-1 text-sm md:text-base">
+                        <span class="flex items-center space-x-3">
+                            <input type="checkbox" id="opt-lenero" onchange="calculateQuinchoTotal()" class="w-5 h-5 accent-orange-600 rounded">
+                            <span>Agregar Leñero a la Parrilla</span>
+                        </span>
+                        <span class="text-sm text-zinc-400 font-medium">+$95.500</span>
+                    </label>
+
+                    <div class="pt-3 border-t border-zinc-800">
+                        <label class="block text-sm text-zinc-400 mb-2">Modificar Campana:</label>
+                        <select id="opt-campana" onchange="calculateQuinchoTotal()" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white text-sm focus:outline-none focus:border-orange-500">
+                            <option value="0">Campana Tradicional (Incluida en base)</option>
+                            <option value="95000">Cambiar a Campana Estilo Mediterránea (+$95.000)</option>
+                        </select>
+                    </div>
+
+                    <div class="pt-3">
+                        <label class="block text-sm text-zinc-400 mb-2">Modificar Parrilla:</label>
+                        <select id="opt-parrilla" onchange="calculateQuinchoTotal()" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white text-sm focus:outline-none focus:border-orange-500">
+                            <option value="0">Parrilla Normal con Manivela (Incluida en base)</option>
+                            <option value="100000">Cambiar a Parrilla Doble (+$100.000)</option>
+                            <option value="150000">Cambiar a Parrilla Doble con Leñero (+$150.000)</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Fila Inferior: Total y Botón de Compra -->
+            <div class="flex flex-col md:flex-row justify-between items-center bg-zinc-900 p-6 md:p-8 rounded-2xl border border-zinc-800">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <span class="text-xs text-zinc-400 uppercase tracking-wider block">Total Quincho Configurado:</span>
+                    <span id="quincho-total-display" class="text-3xl md:text-4xl font-black text-white">$2.150.000</span>
+                </div>
+                <button onclick="addCustomQuinchoToCart()" class="bg-orange-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-orange-700 transition shadow-md w-full md:w-auto text-center">Agregar Quincho Armado al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE INSTAGRAM / VIDEOS REALES -->
+    <section class="bg-zinc-50 py-16 border-t border-zinc-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 bg-orange-100 px-3 py-1.5 rounded-full inline-block mb-2">Comunidad Bulot</span>
+                <h3 class="text-2xl md:text-3xl font-bold tracking-tight">Síguenos en Instagram <a href="https://instagram.com/bulot.cl" target="_blank" class="text-orange-600 hover:underline">@bulot.cl</a></h3>
+                <p class="text-zinc-500 text-sm mt-1">Revisa nuestros últimos reels y trabajos publicados en terreno.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 items-start">
+                <div class="bg-white p-2 rounded-2xl shadow-sm border border-zinc-200 overflow-hidden flex justify-center">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYzuiafpXax/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:none; margin:0; max-width:540px; min-width:226px; padding:0; width:100%;"></blockquote>
+                </div>
+                <div class="bg-white p-2 rounded-2xl shadow-sm border border-zinc-200 overflow-hidden flex justify-center">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcCBPlMpqxM/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:none; margin:0; max-width:540px; min-width:226px; padding:0; width:100%;"></blockquote>
+                </div>
+                <div class="bg-white p-2 rounded-2xl shadow-sm border border-zinc-200 overflow-hidden flex justify-center">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dbq62LZvA3r/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:none; margin:0; max-width:540px; min-width:226px; padding:0; width:100%;"></blockquote>
+                </div>
+                <div class="bg-white p-2 rounded-2xl shadow-sm border border-zinc-200 overflow-hidden flex justify-center">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dczf4-jJqb1/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:none; margin:0; max-width:540px; min-width:226px; padding:0; width:100%;"></blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPINIONES / COMENTARIOS DE CLIENTES -->
+    <section id="opiniones" class="max-w-7xl mx-auto px-4 py-16 border-t border-zinc-100">
+        <div class="text-center mb-12">
+            <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 bg-orange-100 px-3 py-1.5 rounded-full inline-block mb-2">Testimonios</span>
+            <h3 class="text-2xl md:text-3xl font-bold tracking-tight">Lo que dicen nuestros clientes</h3>
+            <p class="text-zinc-500 text-sm mt-1">Experiencias reales de quienes ya disfrutan su quincho Bulot.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-zinc-50 p-6 rounded-3xl border border-zinc-200/60 flex flex-col justify-between">
+                <div>
+                    <div class="flex text-orange-500 mb-3 text-sm">★★★★★</div>
+                    <p class="text-zinc-700 text-sm italic mb-4 leading-relaxed">"Mandé a hacer la parrilla doble con leñero a medida para mi quincho en Lo Barnechea y quedó perfecta. Los materiales se nota que son de primera calidad y el sistema de elevación es súper suave."</p>
+                </div>
+                <div class="flex items-center space-x-3 pt-4 border-t border-zinc-200/60">
+                    <div class="w-10 h-10 rounded-full bg-orange-600 text-white font-bold flex items-center justify-center text-sm">RM</div>
+                    <div>
+                        <p class="font-bold text-xs text-zinc-900">Rodrigo Morales</p>
+                        <p class="text-[11px] text-zinc-500">Santiago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-zinc-50 p-6 rounded-3xl border border-zinc-200/60 flex flex-col justify-between">
+                <div>
+                    <div class="flex text-orange-500 mb-3 text-sm">★★★★★</div>
+                    <p class="text-zinc-700 text-sm italic mb-4 leading-relaxed">"Compré el quincho prefabricado completo con horno y campana mediterránea. Llegó impecable a Concepción. La atención por WhatsApp y la asesoría con las medidas fue excelente."</p>
+                </div>
+                <div class="flex items-center space-x-3 pt-4 border-t border-zinc-200/60">
+                    <div class="w-10 h-10 rounded-full bg-orange-600 text-white font-bold flex items-center justify-center text-sm">CS</div>
+                    <div>
+                        <p class="font-bold text-xs text-zinc-900">Camila Soto</p>
+                        <p class="text-[11px] text-zinc-500">Concepción</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-zinc-50 p-6 rounded-3xl border border-zinc-200/60 flex flex-col justify-between">
+                <div>
+                    <div class="flex text-orange-500 mb-3 text-sm">★★★★★</div>
+                    <p class="text-zinc-700 text-sm italic mb-4 leading-relaxed">"La campana tradicional cumple 100% con lo prometido, cero humo en la terraza. El cotizador online me dio la medida exacta y no tuve ningún problema en la instalación."</p>
+                </div>
+                <div class="flex items-center space-x-3 pt-4 border-t border-zinc-200/60">
+                    <div class="w-10 h-10 rounded-full bg-orange-600 text-white font-bold flex items-center justify-center text-sm">FV</div>
+                    <div>
+                        <p class="font-bold text-xs text-zinc-900">Felipe Valenzuela</p>
+                        <p class="text-[11px] text-zinc-500">Viña del Mar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN GRANDE DE CONFIANZA / MERCADO PAGO ORIGINAL -->
+    <section class="bg-white py-16 px-4 border-t border-zinc-100 text-center">
+        <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+            <div class="text-left">
+                <p class="text-zinc-700 text-base md:text-lg font-medium">Paga Seguro con</p>
+                <p class="text-zinc-900 font-extrabold text-xl md:text-2xl tracking-tight">Mercado Pago</p>
+            </div>
+            <div class="bg-zinc-50 border border-zinc-200/80 px-8 py-6 rounded-3xl shadow-sm flex items-center justify-center">
+                <!-- Logotipo original oficial de Mercado Pago -->
+                <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.19.5/mercadopago/logo__large.png" alt="Logo Mercado Pago" class="h-12 md:h-16 object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/56948682832?text=Hola,%20me%20gustaría%20cotizar%20un%20producto%20de%20Bulot." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20ba5a] transition transform hover:scale-110 flex items-center justify-center">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-zinc-100 text-zinc-600 py-12 px-4 text-center text-xs border-t border-zinc-200">
+        <p>© 2026 Todos los derechos reservados BULOT SpA. Rut: 77.699.476-6.</p>
+    </footer>
+
+    <!-- MODAL / DETALLE DE PARRILLAS -->
+    <div id="grill-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] overflow-y-auto">
+            <div class="md:w-1/2 bg-zinc-100 p-6 flex flex-col justify-between">
+                <div>
+                    <div class="w-full h-64 md:h-72 rounded-2xl overflow-hidden bg-zinc-200 mb-4 border border-zinc-200">
+                        <img id="grill-main-img" src="" class="w-full h-full object-cover">
+                    </div>
+                    <div id="grill-thumbs" class="grid grid-cols-3 gap-3"></div>
+                </div>
+                <div class="mt-6 bg-white p-4 rounded-2xl border border-zinc-200">
+                    <h5 class="font-bold text-xs text-zinc-700 uppercase tracking-wider mb-2">Especificaciones Técnicas</h5>
+                    <ul class="text-xs text-zinc-600 space-y-1">
+                        <li>• <strong>Rejilla y Bandeja:</strong> Acero Inoxidable AISI 304</li>
+                        <li>• <strong>Ángulos:</strong> 15 x 15 x 1,2 mm</li>
+                        <li>• <strong>Estructura del sistema:</strong> Hierro con pintura Calorkote 400°C</li>
+                        <li>• <strong>Soldadura y Tratamiento:</strong> MIG con decapado y pasivado químico</li>
+                        <li>• <strong>Fondo:</strong> Estandarizado a 60 cm máximo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 id="grill-title" class="text-2xl font-bold text-zinc-900 leading-tight">Parrilla a Medida</h3>
+                        <button onclick="closeGrillModal()" class="text-zinc-400 hover:text-zinc-900 font-bold text-xl ml-2">✕</button>
+                    </div>
+                    <p id="grill-price" class="text-2xl font-black text-orange-600 mb-4">$190.000</p>
+                    <p id="grill-desc" class="text-zinc-600 text-sm leading-relaxed mb-6"></p>
+
+                    <div class="bg-orange-50/60 p-5 rounded-2xl border border-orange-100 mb-6">
+                        <h4 class="font-bold text-sm text-zinc-900 mb-3">Mide el espacio donde irá la parrilla</h4>
+                        <div class="grid grid-cols-2 gap-3 mb-3">
+                            <div>
+                                <label class="block text-[11px] font-bold text-zinc-500 uppercase mb-1">Ancho (cm)</label>
+                                <input type="number" id="input-ancho" value="100" oninput="evaluateGrillSpace()" class="w-full bg-white border border-zinc-300 rounded-xl p-2.5 text-zinc-900 text-sm font-bold focus:outline-none focus:border-orange-500">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold text-zinc-500 uppercase mb-1">Fondo (cm)</label>
+                                <input type="number" id="input-fondo" value="60" oninput="evaluateGrillSpace()" class="w-full bg-white border border-zinc-300 rounded-xl p-2.5 text-zinc-900 text-sm font-bold focus:outline-none focus:border-orange-500">
+                            </div>
+                        </div>
+                        <div id="grill-evaluation-box" class="bg-white p-3.5 rounded-xl border border-orange-200 text-xs text-zinc-700 mt-3 leading-relaxed"></div>
+                    </div>
+                </div>
+                <div>
+                    <button onclick="addGrillToCart()" class="w-full bg-zinc-900 text-white font-bold py-3.5 rounded-xl hover:bg-orange-600 transition text-center shadow-md">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL / DETALLE DE CAMPANAS -->
+    <div id="hood-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] overflow-y-auto">
+            <div class="md:w-1/2 bg-zinc-100 p-6 flex flex-col justify-between">
+                <div>
+                    <div class="w-full h-64 md:h-72 rounded-2xl overflow-hidden bg-zinc-200 mb-4 border border-zinc-200">
+                        <img id="hood-main-img" src="" class="w-full h-full object-cover">
+                    </div>
+                    <div id="hood-thumbs" class="grid grid-cols-3 gap-3"></div>
+                </div>
+                <div class="mt-6 bg-white p-4 rounded-2xl border border-zinc-200">
+                    <h5 class="font-bold text-xs text-zinc-700 uppercase tracking-wider mb-2">Especificaciones Técnicas</h5>
+                    <ul class="text-xs text-zinc-600 space-y-1">
+                        <li>• <strong>Eficiencia de Extracción:</strong> 95% de retención de humos</li>
+                        <li>• <strong>Medida Base Estándar:</strong> Hasta 100 x 60 cm</li>
+                        <li>• <strong>Escala Adicional:</strong> +$10.000 por cada 10 cm extras (largo o fondo)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 id="hood-title" class="text-2xl font-bold text-zinc-900 leading-tight">Campana a Medida</h3>
+                        <button onclick="closeHoodModal()" class="text-zinc-400 hover:text-zinc-900 font-bold text-xl ml-2">✕</button>
+                    </div>
+                    <p id="hood-price" class="text-2xl font-black text-orange-600 mb-4">$195.000</p>
+                    <p id="hood-desc" class="text-zinc-600 text-sm leading-relaxed mb-6"></p>
+
+                    <div class="bg-orange-50/60 p-5 rounded-2xl border border-orange-100 mb-6">
+                        <h4 class="font-bold text-sm text-zinc-900 mb-3">Mide el espacio donde irá la campana</h4>
+                        <div class="grid grid-cols-2 gap-3 mb-3">
+                            <div>
+                                <label class="block text-[11px] font-bold text-zinc-500 uppercase mb-1">Largo / Ancho (cm)</label>
+                                <input type="number" id="hood-ancho" value="100" oninput="evaluateHoodSpace()" class="w-full bg-white border border-zinc-300 rounded-xl p-2.5 text-zinc-900 text-sm font-bold focus:outline-none focus:border-orange-500">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold text-zinc-500 uppercase mb-1">Profundidad / Fondo (cm)</label>
+                                <input type="number" id="hood-fondo" value="60" oninput="evaluateHoodSpace()" class="w-full bg-white border border-zinc-300 rounded-xl p-2.5 text-zinc-900 text-sm font-bold focus:outline-none focus:border-orange-500">
+                            </div>
+                        </div>
+                        <div id="hood-evaluation-box" class="bg-white p-3.5 rounded-xl border border-orange-200 text-xs text-zinc-700 mt-3 leading-relaxed"></div>
+                    </div>
+                </div>
+                <div>
+                    <button onclick="addHoodToCart()" class="w-full bg-zinc-900 text-white font-bold py-3.5 rounded-xl hover:bg-orange-600 transition text-center shadow-md">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL / CARRITO LATERAL -->
+    <div id="cart-modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-end">
+        <div class="bg-white w-full max-w-md h-full p-6 flex flex-col justify-between shadow-2xl">
+            <div>
+                <div class="flex justify-between items-center mb-6 border-b border-zinc-100 pb-4">
+                    <h3 class="text-xl font-bold tracking-tight">Tu Carrito de Compras</h3>
+                    <button onclick="toggleCart()" class="text-zinc-400 hover:text-zinc-900 font-bold text-xl">✕</button>
+                </div>
+                <div id="cart-items" class="space-y-4 max-h-[60vh] overflow-y-auto pr-2"></div>
+            </div>
+            <div class="border-t border-zinc-100 pt-4">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="font-bold text-lg">Total a Pagar:</span>
+                    <span id="cart-total" class="text-2xl font-black text-zinc-900">$0</span>
+                </div>
+                <!-- Botón de Mercado Pago con Identidad Visual y Sello -->
+                <button onclick="proceedToMercadoPago()" class="w-full bg-[#009ee3] text-white font-bold py-3.5 rounded-xl hover:bg-[#0081be] transition text-center flex items-center justify-center space-x-2 shadow-sm">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                    <span>Pagar de forma segura con Mercado Pago</span>
+                </button>
+                <div class="flex items-center justify-center space-x-1 mt-2 text-[11px] text-zinc-400">
+                    <span>🔒 Transacción protegida y cifrada</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE CARRITO Y MEDIDORES INTELIGENTES -->
+    <script>
+        let cart = [];
+        let currentGrill = { name: '', fixedPrice: 190000, type: 'simple' };
+        let currentHood = { name: '', basePrice: 195000, price: 195000 };
+        let inlineDoorFinalPrice = 80000;
+        let inlineDoorSummaryText = "";
+
+        function toggleCart() {
+            document.getElementById('cart-modal').classList.toggle('hidden');
+        }
+
+        /* --- LÓGICA MODAL PARRILLAS --- */
+        function openGrillModal(name, fixedPrice, description, images, type) {
+            currentGrill = { name, fixedPrice, type };
+            document.getElementById('grill-title').textContent = name;
+            document.getElementById('grill-desc').textContent = description;
+            document.getElementById('grill-price').textContent = `$${fixedPrice.toLocaleString('es-CL')}`;
+            document.getElementById('grill-main-img').src = images[0];
+
+            if (type === 'lenero') {
+                document.getElementById('input-ancho').value = 150;
+            } else if (type === 'doble') {
+                document.getElementById('input-ancho').value = 120;
+            } else {
+                document.getElementById('input-ancho').value = 100;
+            }
+            document.getElementById('input-fondo').value = 60;
+
+            const thumbs = document.getElementById('grill-thumbs');
+            thumbs.innerHTML = '';
+            images.forEach(img => {
+                thumbs.innerHTML += `<div onclick="document.getElementById('grill-main-img').src='${img}'" class="h-20 rounded-xl overflow-hidden bg-zinc-200 cursor-pointer border-2 border-transparent hover:border-orange-500 transition"><img src="${img}" class="w-full h-full object-cover"></div>`;
+            });
+
+            document.getElementById('grill-modal').classList.remove('hidden');
+            evaluateGrillSpace();
+        }
+
+        function closeGrillModal() {
+            document.getElementById('grill-modal').classList.add('hidden');
+        }
+
+        function evaluateGrillSpace() {
+            let ancho = parseFloat(document.getElementById('input-ancho').value) || 0;
+            let fondo = parseFloat(document.getElementById('input-fondo').value) || 0;
+            const box = document.getElementById('grill-evaluation-box');
+
+            let fondoWarning = fondo > 60 ? `<br><span class="text-amber-600 font-medium">Nota: El fondo se estandariza a 60 cm máximo por diseño técnico.</span>` : "";
+
+            if (currentGrill.type === 'simple') {
+                if (ancho <= 100) {
+                    box.innerHTML = `<span class="font-bold text-green-600">✔ Espacio estándar compatible (Ancho: ${ancho} cm).</span>${fondoWarning}`;
+                } else if (ancho > 100 && ancho <= 120) {
+                    box.innerHTML = `<span class="font-bold text-orange-600">⚠ A ${ancho} cm requiere cambiar a otro modelo de parrilla o agregar un leñero (hasta 120 cm).</span>${fondoWarning}`;
+                } else {
+                    box.innerHTML = `<span class="font-bold text-red-600">❌ Espacio superior al límite estándar. Debes cambiar de modelo o cotizar a medida.</span>${fondoWarning}`;
+                }
+            } else if (currentGrill.type === 'doble') {
+                if (ancho <= 120) {
+                    box.innerHTML = `<span class="font-bold text-green-600">✔ Espacio estándar doble compatible (Ancho: ${ancho} cm).</span>${fondoWarning}`;
+                } else if (ancho > 120 && ancho <= 150) {
+                    box.innerHTML = `<span class="font-bold text-orange-600">⚠ A ${ancho} cm requiere cambiar a modelo doble con leñero o consultar por WhatsApp.</span>${fondoWarning}`;
+                } else {
+                    box.innerHTML = `<span class="font-bold text-red-600">❌ Espacio superior a 150 cm. Consúltanos por WhatsApp.</span>${fondoWarning}`;
+                }
+            } else if (currentGrill.type === 'lenero') {
+                if (ancho <= 150) {
+                    box.innerHTML = `<span class="font-bold text-green-600">✔ Espacio estándar compatible con leñero (Ancho: ${ancho} cm).</span>${fondoWarning}`;
+                } else {
+                    box.innerHTML = `<span class="font-bold text-red-600">❌ Espacio superior a 150 cm. Consúltanos por WhatsApp.</span>${fondoWarning}`;
+                }
+            }
+        }
+
+        function addGrillToCart() {
+            let ancho = document.getElementById('input-ancho').value;
+            let fondo = document.getElementById('input-fondo').value;
+            let detail = ` (${ancho}x${Math.min(fondo, 60)} cm)`;
+            cart.push({ name: currentGrill.name + detail, price: currentGrill.fixedPrice });
+            updateCartUI();
+            closeGrillModal();
+            toggleCart();
+        }
+
+        /* --- LÓGICA MODAL CAMPANAS --- */
+        function openHoodModal(name, basePrice, description, images) {
+            currentHood = { name, basePrice, price: basePrice };
+            document.getElementById('hood-title').textContent = name;
+            document.getElementById('hood-desc').textContent = description;
+            document.getElementById('hood-main-img').src = images[0];
+
+            const thumbs = document.getElementById('hood-thumbs');
+            thumbs.innerHTML = '';
+            images.forEach(img => {
+                thumbs.innerHTML += `<div onclick="document.getElementById('hood-main-img').src='${img}'" class="h-20 rounded-xl overflow-hidden bg-zinc-200 cursor-pointer border-2 border-transparent hover:border-orange-500 transition"><img src="${img}" class="w-full h-full object-cover"></div>`;
+            });
+
+            document.getElementById('hood-modal').classList.remove('hidden');
+            evaluateHoodSpace();
+        }
+
+        function closeHoodModal() {
+            document.getElementById('hood-modal').classList.add('hidden');
+        }
+
+        function evaluateHoodSpace() {
+            let ancho = parseFloat(document.getElementById('hood-ancho').value) || 0;
+            let fondo = parseFloat(document.getElementById('hood-fondo').value) || 0;
+            const box = document.getElementById('hood-evaluation-box');
+
+            let extraAnchoCm = Math.max(0, ancho - 100);
+            let extraFondoCm = Math.max(0, fondo - 60);
+
+            let incrementosLargo = Math.ceil(extraAnchoCm / 10);
+            let incrementosFondo = Math.ceil(extraFondoCm / 10);
+            let totalIncrementos = incrementosLargo + incrementosFondo;
+
+            let extraPrice = totalIncrementos * 10000;
+            currentHood.price = currentHood.basePrice + extraPrice;
+
+            if (totalIncrementos === 0) {
+                box.innerHTML = `<span class="font-bold text-green-600">✔ Medida dentro del estándar (hasta 100x60 cm). Precio base aplicable.</span>`;
+            } else {
+                box.innerHTML = `<span class="font-bold text-orange-600">⚠ Medida superior al estándar.</span><br>Exceso detectado: se aplican <strong>${totalIncrementos} tramos extras</strong> (+$${extraPrice.toLocaleString('es-CL')}).`;
+            }
+
+            document.getElementById('hood-price').textContent = `$${currentHood.price.toLocaleString('es-CL')}`;
+        }
+
+        function addHoodToCart() {
+            let ancho = document.getElementById('hood-ancho').value;
+            let fondo = document.getElementById('hood-fondo').value;
+            let detail = ` (${ancho}x${fondo} cm)`;
+            cart.push({ name: currentHood.name + detail, price: currentHood.price });
+            updateCartUI();
+            closeHoodModal();
+            toggleCart();
+        }
+
+        /* --- LÓGICA PUERTAS EN LÍNEA --- */
+        function evaluateInlineDoorSpace() {
+            let alto = parseFloat(document.getElementById('inline-door-alto').value) || 0;
+            let ancho = parseFloat(document.getElementById('inline-door-ancho').value) || 0;
+            const box = document.getElementById('inline-door-evaluation-box');
+
+            if (ancho <= 0 || alto <= 0) {
+                box.innerHTML = `<span class="font-bold text-red-600">❌ Ingresa medidas válidas mayores a 0.</span>`;
+                return;
+            }
+
+            let cantidadPuertas = Math.ceil(ancho / 60);
+            let anchoPorPuerta = (ancho / cantidadPuertas).toFixed(1);
+
+            let recargoAlturaPorPuerta = 0;
+            let alturaMensaje = "";
+
+            if (alto <= 90) {
+                alturaMensaje = "Altura estándar (hasta 90 cm): Sin recargo.";
+            } else if (alto > 90 && alto <= 100) {
+                recargoAlturaPorPuerta = 10000;
+                alturaMensaje = "Altura mayor a 90 cm (hasta 100 cm máx.): Aplica recargo de +$10.000 por puerta.";
+            } else {
+                alturaMensaje = "<span class='text-red-600 font-bold'>⚠ Altura superior a 100 cm excede el estándar y requiere cotización especial por WhatsApp.</span>";
+            }
+
+            let precioUnitario = 80000 + recargoAlturaPorPuerta;
+            let precioTotal = cantidadPuertas * precioUnitario;
+            inlineDoorFinalPrice = precioTotal;
+
+            inlineDoorSummaryText = `${cantidadPuertas} Puerta(s) metálica(s) a medida (Vano: ${alto}x${ancho} cm | Aprox. ${anchoPorPuerta} cm ancho c/u)`;
+
+            box.innerHTML = `
+                <div class="space-y-1">
+                    <p>• <strong>Cantidad de puertas necesarias:</strong> <span class="text-orange-600 font-bold">${cantidadPuertas} unidad(es)</span> (aprox. ${anchoPorPuerta} cm de ancho cada una)</p>
+                    <p>• <strong>${alturaMensaje}</strong></p>
+                    <p class="pt-2 border-t border-orange-200 mt-2 font-bold text-zinc-900">Desglose: ${cantidadPuertas} x $${precioUnitario.toLocaleString('es-CL')} c/u</p>
+                </div>
+            `;
+
+            document.getElementById('inline-door-price').textContent = `$${precioTotal.toLocaleString('es-CL')}`;
+        }
+
+        function addInlineDoorToCart() {
+            let alto = document.getElementById('inline-door-alto').value;
+            if (alto > 100) {
+                alert("Para alturas mayores a 100 cm, por favor consúltanos directamente por WhatsApp.");
+                return;
+            }
+            cart.push({ name: inlineDoorSummaryText, price: inlineDoorFinalPrice });
+            updateCartUI();
+            toggleCart();
+        }
+
+        /* --- LÓGICA HORNOS --- */
+        function addOvenToCart() {
+            cart.push({ name: "Horno Mendocino a Leña (Doble cámara y refractarios)", price: 490000 });
+            updateCartUI();
+            toggleCart();
+        }
+
+        /* --- LÓGICA ACCESORIOS --- */
+        function addAccessoryToCart(name, price) {
+            cart.push({ name: name, price: price });
+            updateCartUI();
+            toggleCart();
+        }
+
+        /* --- CARRITO GENERAL --- */
+        function updateCartUI() {
+            const countEl = document.getElementById('cart-count');
+            const itemsEl = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total');
+
+            countEl.textContent = cart.length;
+            itemsEl.innerHTML = '';
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                itemsEl.innerHTML += `
+                    <div class="flex justify-between items-center bg-zinc-50 p-4 rounded-2xl border border-zinc-100">
+                        <div>
+                            <p class="font-bold text-sm text-zinc-900">${item.name}</p>
+                            <p class="text-xs text-zinc-500 mt-0.5">$${item.price.toLocaleString('es-CL')}</p>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-red-500 font-semibold text-xs hover:underline">Eliminar</button>
+                    </div>
+                `;
+            });
+
+            totalEl.textContent = `$${total.toLocaleString('es-CL')}`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function calculateQuinchoTotal() {
+            let base = 2150000;
+            if (document.getElementById('opt-horno').checked) base += 490000;
+            if (document.getElementById('opt-lavaplatos').checked) base += 130000;
+            if (document.getElementById('opt-spiedo').checked) base += 189000;
+            if (document.getElementById('opt-lenero').checked) base += 95500;
+            base += parseInt(document.getElementById('opt-campana').value);
+            base += parseInt(document.getElementById('opt-parrilla').value);
+
+            document.getElementById('quincho-total-display').textContent = `$${base.toLocaleString('es-CL')}`;
+            return base;
+        }
+
+        function addCustomQuinchoToCart() {
+            let description = "Quincho Prefabricado Base";
+            let opcionales = [];
+            if (document.getElementById('opt-horno').checked) opcionales.push("Horno Mendocino a Leña");
+            if (document.getElementById('opt-lavaplatos').checked) opcionales.push("Lavaplatos");
+            if (document.getElementById('opt-spiedo').checked) opcionales.push("Kit Asador Spiedo 30kg");
+            if (document.getElementById('opt-lenero').checked) opcionales.push("Leñero a la Parrilla");
+            
+            const campanaVal = document.getElementById('opt-campana').value;
+            if (campanaVal > 0) opcionales.push("Campana Mediterránea");
+
+            const parrillaVal = document.getElementById('opt-parrilla').value;
+            if (parrillaVal == 100000) opcionales.push("Parrilla Doble");
+            if (parrillaVal == 150000) opcionales.push("Parrilla Doble c/Leñero");
+
+            if (opcionales.length > 0) {
+                description += " (" + opcionales.join(", ") + ")";
+            }
+
+            let finalPrice = calculateQuinchoTotal();
+            cart.push({ name: description, price: finalPrice });
+            updateCartUI();
+            toggleCart();
+        }
+
+        function proceedToMercadoPago() {
+            if (cart.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+            window.location.href = "https://link.mercadopago.cl/tupuntodeventa"; 
+        }
+
+        // Inicializar el medidor de puertas al cargar
+        window.onload = function() {
+            evaluateInlineDoorSpace();
+        };
+    </script>
+</body>
+</html>
