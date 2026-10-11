@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puertas para Quincho a Medida | Bulot Chile</title>
+    <meta name="description" content="Puertas metálicas a medida para quinchos. Estructura de ángulos con pintura multiacción y tablas de madera. Cotizador de medidas online.">
+    <link rel="canonical" href="https://www.bulot.cl/puertas-para-quincho/">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SDK de Mercado Pago -->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+
+    <!-- Datos Estructurados Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Puertas Metálicas para Quincho a Medida",
+      "description": "Puertas metálicas con madera combinada fabricadas a medida para cierres inferiores de quinchos.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Bulot"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "CLP",
+        "price": "80000",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.bulot.cl/puertas-para-quincho/"
+      }
+    }
+    </script>
+</head>
+<body class="bg-white text-zinc-900 font-sans pb-20 md:pb-0">
+
+    <div class="bg-red-600 text-white text-xs md:text-sm text-center py-2.5 px-4 font-bold tracking-wide border-b border-red-700 shadow-sm">
+        <span>🔥 ¡OFERTA LIMITADA: 15% DE DESCUENTO EN TODAS NUESTRAS PUERTAS Y ENVÍOS A TODO CHILE! 🔥</span>
+    </div>
+
+    <header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-zinc-100">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="text-lg md:text-xl font-bold tracking-wider text-zinc-900">BULOT <span class="text-orange-600 font-normal text-sm md:text-base">Quinchos & Parrillas</span></a>
+            
+            <nav class="hidden lg:flex space-x-6 text-sm font-medium text-zinc-600">
+                <a href="/parrillas-a-medida/" class="hover:text-zinc-900 transition">Parrillas</a>
+                <a href="/campanas-para-quincho/" class="hover:text-zinc-900 transition">Campanas</a>
+                <a href="/puertas-para-quincho/" class="text-orange-600 font-bold transition">Puertas</a>
+                <a href="/#hornos" class="hover:text-zinc-900 transition">Hornos</a>
+                <a href="/#accesorios" class="hover:text-zinc-900 transition">Accesorios</a>
+                <a href="/#quincho-armador" class="hover:text-zinc-900 transition">Quincho Prefabricado</a>
+            </nav>
+
+            <button onclick="toggleCart()" class="bg-zinc-900 text-white px-3.5 py-2 rounded-full text-xs md:text-sm font-semibold flex items-center space-x-2 hover:bg-zinc-800 transition shadow-sm">
+                <span>🛒 Carrito</span>
+                <span id="cart-count" class="bg-orange-600 text-white text-xs px-2 py-0.5 rounded-full">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="bg-zinc-900 text-white py-16 px-4 border-b border-zinc-800 text-center">
+        <div class="max-w-4xl mx-auto">
+            <a href="/" class="text-xs text-orange-400 hover:underline mb-3 inline-block">← Volver al inicio</a>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Puertas para Quincho a Medida</h1>
+            <p class="text-zinc-300 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">Ajuste perfecto para el vano inferior de tu quincho. Estructura de ángulos metálicos con pintura multiacción y terminación en madera de alta durabilidad.</p>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-6 bg-zinc-50 p-8 rounded-3xl border border-zinc-200/60 flex flex-col justify-between">
+                <div>
+                    <div class="h-64 rounded-2xl mb-4 overflow-hidden bg-zinc-200 border border-zinc-200">
+                        <img src="../imagenes/puerta-quincho-1.jpg" class="w-full h-full object-cover" alt="Puertas Metálicas a Medida">
+                    </div>
+                    <h2 class="font-bold text-2xl mb-2 text-zinc-900">Puertas Metálicas con Madera a Medida</h2>
+                    <p class="text-zinc-600 text-sm mb-4 leading-relaxed">Estructura de ángulos con soldadura MIG y pintura multiacción (3 en 1: esmalte, anticorrosivo y convertidor de óxido), combinadas con maderas de 2"x1" horizontales.</p>
+                </div>
+                <div>
+                    <div class="flex items-baseline space-x-3 mb-2">
+                        <span class="text-lg text-red-500 line-through font-semibold">$94.000</span>
+                        <span id="inline-door-price" class="font-bold text-3xl text-orange-600">$80.000</span>
+                        <span class="text-xs bg-red-100 text-red-700 font-bold px-2 py-1 rounded-md">-15% OFF</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-orange-50/70 p-8 rounded-3xl border border-orange-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg text-zinc-900 mb-2">Mide el espacio (Alto x Ancho)</h3>
+                    <p class="text-xs text-zinc-600 mb-6 leading-relaxed">Ingresa las medidas del vano. El sistema calcula automáticamente cuántas puertas necesitas ($80.000 c/u con descuento aplicado hasta 90x60 cm).</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-[11px] font-bold text-zinc-500 uppercase mb-1">Alto (cm)</label>
+                            <input type="number" id="inline-door-alto" value="80" oninput="evaluateInlineDoorSpace()" class="w-full bg-white border border-zinc-300 rounded-xl p-3 text-zinc-900 text-base font-bold focus:outline-none focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold text-zinc-500 uppercase mb-1">Ancho (cm)</label>
+                            <input type="number" id="inline-door-ancho" value="50" oninput="evaluateInlineDoorSpace()" class="w-full bg-white border border-zinc-300 rounded-xl p-3 text-zinc-900 text-base font-bold focus:outline-none focus:border-orange-500">
+                        </div>
+                    </div>
+
+                    <div id="inline-door-evaluation-box" class="bg-white p-4 rounded-2xl border border-orange-200 text-xs text-zinc-700 mb-6 leading-relaxed"></div>
+                </div>
+
+                <button onclick="addInlineDoorToCart()" class="w-full bg-zinc-900 text-white font-bold py-4 rounded-xl hover:bg-orange-600 transition text-center shadow-md text-sm">Agregar Puertas al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL CARRITO -->
+    <div id="cart-modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex justify-end">
+        <div class="bg-white w-full max-w-md h-full p-6 flex flex-col justify-between shadow-2xl relative">
+            <button onclick="toggleCart()" class="absolute top-4 right-4 z-20 bg-zinc-900 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl shadow-lg hover:bg-orange-600 transition">✕</button>
+
+            <div>
+                <div class="flex justify-between items-center mb-6 border-b border-zinc-100 pb-4">
+                    <h3 class="text-xl font-bold tracking-tight">Tu Carrito de Compras</h3>
+                </div>
+                <div id="cart-items" class="space-y-4 max-h-[60vh] overflow-y-auto pr-2"></div>
+            </div>
+            <div class="border-t border-zinc-100 pt-4">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="font-bold text-lg">Total a Pagar:</span>
+                    <span id="cart-total" class="text-2xl font-black text-zinc-900">$0</span>
+                </div>
+                <button onclick="proceedToMercadoPago()" class="w-full bg-[#009ee3] text-white font-bold py-3.5 rounded-xl hover:bg-[#0081be] transition text-center shadow-sm">
+                    <span>Pagar con Mercado Pago</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-zinc-100 text-zinc-600 py-12 px-4 text-center text-xs border-t border-zinc-200 mt-20">
+        <p>© 2026 Todos los derechos reservados BULOT SpA. Rut: 77.699.476-6.</p>
+    </footer>
+
+    <script>
+        let cart = [];
+        let inlineDoorFinalPrice = 80000;
+        let inlineDoorSummaryText = "";
+
+        function toggleCart() {
+            document.getElementById('cart-modal').classList.toggle('hidden');
+        }
+
+        function evaluateInlineDoorSpace() {
+            let alto = parseFloat(document.getElementById('inline-door-alto').value) || 0;
+            let ancho = parseFloat(document.getElementById('inline-door-ancho').value) || 0;
+            const box = document.getElementById('inline-door-evaluation-box');
+
+            if (ancho <= 0 || alto <= 0) {
+                box.innerHTML = `<span class="font-bold text-red-600">❌ Ingresa medidas válidas mayores a 0.</span>`;
+                return;
+            }
+
+            let cantidadPuertas = Math.ceil(ancho / 60);
+            let anchoPorPuerta = (ancho / cantidadPuertas).toFixed(1);
+
+            let recargoAlturaPorPuerta = 0;
+            let alturaMensaje = "";
+
+            if (alto <= 90) {
+                alturaMensaje = "Altura estándar (hasta 90 cm): Sin recargo.";
+            } else if (alto > 90 && alto <= 100) {
+                recargoAlturaPorPuerta = 10000;
+                alturaMensaje = "Altura mayor a 90 cm (hasta 100 cm máx.): Aplica recargo de +$10.000 por puerta.";
+            } else {
+                alturaMensaje = "<span class='text-red-600 font-bold'>⚠ Altura superior a 100 cm excede el estándar y requiere cotización especial por WhatsApp.</span>";
+            }
+
+            let precioUnitario = 80000 + recargoAlturaPorPuerta;
+            let precioTotal = cantidadPuertas * precioUnitario;
+            inlineDoorFinalPrice = precioTotal;
+
+            inlineDoorSummaryText = `${cantidadPuertas} Puerta(s) metálica(s) a medida (Vano: ${alto}x${ancho} cm | Aprox. ${anchoPorPuerta} cm ancho c/u)`;
+
+            box.innerHTML = `
+                <div class="space-y-1">
+                    <p>• <strong>Cantidad de puertas necesarias:</strong> <span class="text-orange-600 font-bold">${cantidadPuertas} unidad(es)</span> (aprox. ${anchoPorPuerta} cm de ancho cada una)</p>
+                    <p>• <strong>${alturaMensaje}</strong></p>
+                    <p class="pt-2 border-t border-orange-200 mt-2 font-bold text-zinc-900">Desglose con -15% OFF: ${cantidadPuertas} x $${precioUnitario.toLocaleString('es-CL')} c/u</p>
+                </div>
+            `;
+
+            document.getElementById('inline-door-price').textContent = `$${precioTotal.toLocaleString('es-CL')}`;
+        }
+
+        function addInlineDoorToCart() {
+            let alto = document.getElementById('inline-door-alto').value;
+            if (alto > 100) {
+                alert("Para alturas mayores a 100 cm, por favor consúltanos directamente por WhatsApp.");
+                return;
+            }
+            cart.push({ name: inlineDoorSummaryText, price: inlineDoorFinalPrice });
+            updateCartUI();
+            toggleCart();
+        }
+
+        function updateCartUI() {
+            const countEl = document.getElementById('cart-count');
+            const itemsEl = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total');
+
+            countEl.textContent = cart.length;
+            itemsEl.innerHTML = '';
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                itemsEl.innerHTML += `
+                    <div class="flex justify-between items-center bg-zinc-50 p-4 rounded-2xl border border-zinc-100">
+                        <div>
+                            <p class="font-bold text-sm text-zinc-900">${item.name}</p>
+                            <p class="text-xs text-zinc-500 mt-0.5">$${item.price.toLocaleString('es-CL')}</p>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-red-500 font-semibold text-xs hover:underline">Eliminar</button>
+                    </div>
+                `;
+            });
+
+            totalEl.textContent = `$${total.toLocaleString('es-CL')}`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        async function proceedToMercadoPago() {
+            if (cart.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+            alert("Redirigiendo a pasarela de pago segura...");
+        }
+
+        window.onload = function() {
+            evaluateInlineDoorSpace();
+        };
+    </script>
+</body>
+</html>
