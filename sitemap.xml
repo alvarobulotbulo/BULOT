@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página de Inicio -->
   <url>
     <loc>https://www.bulot.cl/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Categoría: Parrillas a Medida -->
+  <url>
+    <loc>https://www.bulot.cl/parrillas-a-medida/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Categoría: Campanas para Quincho -->
+  <url>
+    <loc>https://www.bulot.cl/campanas-para-quincho/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Categoría: Puertas para Quincho -->
+  <url>
+    <loc>https://www.bulot.cl/puertas-para-quincho/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Categoría: Hornos a Leña -->
+  <url>
+    <loc>https://www.bulot.cl/hornos/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Categoría: Quincho Prefabricado -->
+  <url>
+    <loc>https://www.bulot.cl/quincho-prefabricado/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Producto: Spiedo para Quincho -->
+  <url>
+    <loc>https://www.bulot.cl/spiedo-para-quincho/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Producto: Fogón Anti-Humo con Spiedo -->
+  <url>
+    <loc>https://www.bulot.cl/fogon-anti-humo/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
